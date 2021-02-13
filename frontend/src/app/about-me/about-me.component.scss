@@ -6,10 +6,27 @@
 
   .container {
     display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .info {
-      .description {
-        color: $white;
+    .mid-content {
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 90vw;
+        height: 30%;
+        padding: 5rem 1rem;
+      }
+
+      .info {
+        padding: 1rem;
+
+        .description {
+          font-size: 1.3rem;
+          text-align: justify;
+          color: $white;
+        }
       }
     }
   }
