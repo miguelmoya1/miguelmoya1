@@ -1,7 +1,16 @@
+@import "../shared/style.scss";
+
 .content {
   height: 50rem;
   padding: 3rem;
 
   .container {
+    display: flex;
+
+    .info {
+      .description {
+        color: $white;
+      }
+    }
   }
 }

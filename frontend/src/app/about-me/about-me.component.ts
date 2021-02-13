@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
   public title = 'About Me';
+  public date = new Date().getFullYear() - new Date('01/03/2017').getFullYear();
+  public imageWidth = window.innerWidth / 5;
 
   constructor() {}
 
