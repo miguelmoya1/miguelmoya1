@@ -1,0 +1,32 @@
+@import "../shared/style.scss";
+
+.content {
+  width: 100%;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    text-transform: capitalize;
+    color: $white;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+
+    .line {
+      height: 2px;
+      width: 3rem;
+      background-color: $primary;
+    }
+
+    .number {
+      color: $white;
+      font-size: 4rem;
+    }
+  }
+}
