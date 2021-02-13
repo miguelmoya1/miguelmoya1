@@ -7,9 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Interceptor } from './shared/interceptor/interceptor.service';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
+import { AboutMeComponent } from './about-me/about-me.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, AboutMeComponent, TitleComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
