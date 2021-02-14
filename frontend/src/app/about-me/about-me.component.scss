@@ -1,9 +1,6 @@
 @import "../shared/style.scss";
 
 .content {
-  height: 50rem;
-  padding: 3rem;
-
   .container {
     display: flex;
     align-items: center;
@@ -14,7 +11,8 @@
       flex-direction: column;
 
       img {
-        width: 90vw;
+        margin: 0 auto;
+        width: 85vw;
         height: 30%;
         padding: 5rem 1rem;
       }

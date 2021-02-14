@@ -9,9 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { TitleComponent } from './title/title.component';
+import { AptitudesComponent } from './aptitudes/aptitudes.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, AboutMeComponent, TitleComponent],
+  declarations: [AppComponent, HeaderComponent, AboutMeComponent, TitleComponent, AptitudesComponent],
   imports: [
     HttpClientModule,
     BrowserModule,

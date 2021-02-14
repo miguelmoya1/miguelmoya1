@@ -1,8 +1,6 @@
 @import "../shared/style.scss";
 
 .content {
-  width: 100%;
-
   position: relative;
 
   display: flex;
@@ -10,6 +8,7 @@
   justify-content: space-between;
 
   .title {
+    margin-left: 1rem;
     text-transform: capitalize;
     color: $white;
   }
