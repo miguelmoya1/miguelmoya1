@@ -10,9 +10,10 @@ import { HeaderComponent } from './header/header.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { TitleComponent } from './title/title.component';
 import { AptitudesComponent } from './aptitudes/aptitudes.component';
+import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, AboutMeComponent, TitleComponent, AptitudesComponent],
+  declarations: [AppComponent, HeaderComponent, AboutMeComponent, TitleComponent, AptitudesComponent, ResumeComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
