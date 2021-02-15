@@ -6,14 +6,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Interceptor } from './shared/interceptor/interceptor.service';
 import { AppRoutingModule } from './app-routing.module';
-import { HeaderComponent } from './header/header.component';
+import { ProfileComponent } from './profile/profile.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { TitleComponent } from './title/title.component';
 import { AptitudesComponent } from './aptitudes/aptitudes.component';
 import { ResumeComponent } from './resume/resume.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, AboutMeComponent, TitleComponent, AptitudesComponent, ResumeComponent],
+  declarations: [
+    AppComponent,
+    ProfileComponent,
+    AboutMeComponent,
+    TitleComponent,
+    AptitudesComponent,
+    ResumeComponent,
+  ],
   imports: [
     HttpClientModule,
     BrowserModule,

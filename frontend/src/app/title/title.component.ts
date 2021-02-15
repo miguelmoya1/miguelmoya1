@@ -7,7 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class TitleComponent {
   @Input() title!: string;
-  @Input() number!: number;
 
   constructor() {}
 }

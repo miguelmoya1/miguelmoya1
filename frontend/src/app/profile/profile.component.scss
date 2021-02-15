@@ -1,0 +1,17 @@
+.content {
+  width: 480px;
+  height: 100%;
+
+  border-radius: 8px;
+
+  background-color: red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    border-radius: 75px;
+  }
+}
