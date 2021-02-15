@@ -11,4 +11,17 @@
     text-transform: capitalize;
     color: $white;
   }
+
+  &::before {
+    display: block;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: linear-gradient(to left top, rgba(0, 0, 0, 0), $primary);
+    position: absolute;
+    margin-left: 12px;
+    margin-top: 4px;
+    z-index: 0;
+    border-radius: 50px;
+  }
 }
