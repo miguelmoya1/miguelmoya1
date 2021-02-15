@@ -1,17 +1,72 @@
+@import "../shared/style.scss";
+
 .content {
   width: 480px;
   height: 100%;
 
   border-radius: 8px;
 
-  background-color: red;
+  background-color: $background-secondary;
+  position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  box-shadow: 10px 10px 15px rgb(0 0 0 / 10%);
 
-  img {
-    border-radius: 75px;
+  .header {
+    top: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 0;
+
+    position: absolute;
+
+    background: url(../../assets/header.webp);
+    border-radius: 8px;
+    background-size: 100% 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 80%;
+      left: 0;
+      height: 40%;
+      width: 50%;
+      background: $background-secondary;
+      transform: skew(0deg, 10deg);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 80%;
+      right: 0;
+      height: 100%;
+      width: 50%;
+      background: $background-secondary;
+      transform: skew(0deg, -10deg);
+    }
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+
+    img {
+      border-radius: 75px;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    h4 {
+      margin: 0;
+      color: $primary;
+    }
   }
 }
