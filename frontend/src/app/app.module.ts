@@ -12,6 +12,7 @@ import { AptitudesComponent } from './aptitudes/aptitudes.component';
 import { ResumeComponent } from './resume/resume.component';
 import { MenuComponent } from './menu/menu.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { MatIconModule } from '@angular/material/icon';
     AptitudesComponent,
     ResumeComponent,
     MenuComponent,
+    ContactComponent,
   ],
   imports: [
     HttpClientModule,
