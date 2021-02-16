@@ -45,13 +45,21 @@
       height: 100%;
       width: 100%;
 
+      transition: 0.5s;
+
       mat-icon {
         margin: 0.3rem;
       }
 
       text-decoration: none;
       color: $white;
-      font-size: 0.75rem;
+      font-size: 0.65rem;
+
+      &:hover,
+      &.active {
+        color: $primary;
+        font-size: 0.75rem;
+      }
     }
   }
 }

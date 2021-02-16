@@ -1,18 +1,26 @@
 <div class="content">
-  <div class="button"><a href="#">
+  <div class="button">
+    <a (click)="change('about')" [ngClass]="{active: actualRoute === 'about'}">
       <mat-icon>person</mat-icon>
       ABOUT
-    </a></div>
-  <div class="button"><a href="#">
+    </a>
+  </div>
+  <div class="button">
+    <a (click)="change('resume')" [ngClass]="{active: actualRoute === 'resume'}">
       <mat-icon>build</mat-icon>
-      SKILLS
-    </a></div>
-  <div class="button"><a href="#">
+      RESUME
+    </a>
+  </div>
+  <div class="button">
+    <a (click)="change('aptitudes')" [ngClass]="{active: actualRoute === 'aptitudes'}">
       <mat-icon>handyman</mat-icon>
       APTITUDES
-    </a></div>
-  <div class="button"><a href="#">
+    </a>
+  </div>
+  <div class="button">
+    <a (click)="change('contact')" [ngClass]="{active: actualRoute === 'contact'}">
       <mat-icon>alternate_email</mat-icon>
       CONTACT
-    </a></div>
+    </a>
+  </div>
 </div>
