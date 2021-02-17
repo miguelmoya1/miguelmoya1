@@ -31,5 +31,5 @@ jobs:
             cd frontend
             npm i --force
             npm run build
-            cp -r dist/miguelmoya1 /var/www/miguelmo
+            cp -r dist/miguelmoya1/* /var/www/miguelmo
             cp -r node_modules /var/www/miguelmo
