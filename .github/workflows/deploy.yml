@@ -32,7 +32,7 @@ jobs:
             git restore yarn.lock
             git pull
             cd frontend
-            npm i --force
+            npm i --force --loglevel=error
             npm run build
             cp -r dist/miguelmoya1/* /var/www/miguelmo
             cp -r node_modules /var/www/miguelmo
