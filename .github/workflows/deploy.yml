@@ -27,6 +27,7 @@ jobs:
           script: |
             mkdir temp
             git clone https://github.com/miguelmoya1/miguelmoya1.git
+            ls
             cd miguelmo1/frontend
             npm i
             npm build
