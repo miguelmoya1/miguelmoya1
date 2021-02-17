@@ -25,5 +25,11 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            ls
-            pwd
+            mkdir temp
+            git clone https://github.com/miguelmoya1/miguelmoya1.git
+            cd miguelmo1/frontend
+            npm i
+            npm build
+            cp dist/miguelmoya1 /var/www/miguelmo1
+            cp node_modules /var/www/miguelmo1
+            rm -r temp/*
