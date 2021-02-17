@@ -30,6 +30,6 @@ jobs:
             git pull
             cd frontend
             npm i --force
-            npm build
+            npm run build
             cp dist/miguelmoya1 /var/www/miguelmo
-            cp node_modules /var/www/miguelmo
+            cp -r node_modules /var/www/miguelmo
