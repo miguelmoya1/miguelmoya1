@@ -26,9 +26,11 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
             git clone https://github.com/miguelmoya1/miguelmoya1.git
-            ls
+            echo CLONED FINISHED
             cd miguelmoya1/frontend
+            echo MOVED TO MIGUELMOYA1/FRONTEND
             npm i
+            echo INSTALLED
             npm build
             cp dist/miguelmoya1 /var/www/miguelmo
             cp node_modules /var/www/miguelmo
