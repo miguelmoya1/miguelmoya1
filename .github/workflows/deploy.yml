@@ -27,6 +27,9 @@ jobs:
           script: |
             git clone https://github.com/miguelmoya1/miguelmoya1.git
             cd miguelmoya1
+            git restore package.json
+            git restore package-lock.json
+            git restore yarn.lock
             git pull
             cd frontend
             npm i --force
