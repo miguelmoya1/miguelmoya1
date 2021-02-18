@@ -1,1 +1,29 @@
-<app-title [title]="title">
+<app-title [title]="'Languages'"></app-title>
+
+<div class="languages" *ngFor="let language of languages">
+  <h3 class="title">{{language.name}}</h3>
+
+  <div class="full-bar">
+    <div class="progress" [ngStyle]="{width: language.value + '%'}"></div>
+  </div>
+</div>
+
+<app-title [title]="'CODING'"></app-title>
+
+<div class="coding" *ngFor="let framework of frameworks">
+  <h3 class="title">{{framework.name}}</h3>
+
+  <div class="dots-container">
+    <div class="dot" *ngFor="let dot of totalDots; let i = index" [ngClass]="{color: i < framework.value}"></div>
+  </div>
+</div>
+
+<app-title [title]="'PROGRAMMING LANGUAGE'"></app-title>
+
+<div class="programming">
+  <div class="p-content" *ngFor="let pl of programmingLanguage">
+    <mat-progress-spinner [value]="pl.value"></mat-progress-spinner>
+    <h4 class="percentage">{{pl.value}}%</h4>
+    <h3>{{pl.name}}</h3>
+  </div>
+</div>

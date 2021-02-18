@@ -13,6 +13,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { MenuComponent } from './menu/menu.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ContactComponent } from './contact/contact.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContactComponent } from './contact/contact.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     MatIconModule,
+    MatProgressSpinnerModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true },
