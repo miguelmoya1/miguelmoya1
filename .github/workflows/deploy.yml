@@ -25,14 +25,9 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            git clone https://github.com/miguelmoya1/miguelmoya1.git
-            cd miguelmoya1
-            git restore package.json
-            git restore package-lock.json
-            git restore yarn.lock
-            git pull
-            cd frontend
-            npm i --force --loglevel=error
+            node gitCheck.js https://github.com/miguelmoya1/miguelmoya1.git
+            cd miguelmoya1/frontend
+            npm i --loglevel=error
             npm run build
             cp -r dist/miguelmoya1/* /var/www/miguelmo
             cp -r node_modules /var/www/miguelmo
