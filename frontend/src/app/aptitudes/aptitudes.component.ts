@@ -24,13 +24,15 @@ export class AptitudesComponent implements OnInit {
   public frameworks: Aptitude[] = [
     { name: 'Angular', value: 10 },
     { name: 'Ionic', value: 10 },
+    { name: 'Node', value: 9 },
+    { name: 'Nestjs', value: 9 },
     { name: 'React', value: 9 },
     { name: 'React-native', value: 8 },
   ];
 
   public programmingLanguage: Aptitude[] = [
-    { name: 'Javascript', value: 90 },
-    { name: 'Typescript', value: 86 },
+    { name: 'Javascript', value: 83 },
+    { name: 'Typescript', value: 91 },
     { name: 'Java', value: 60 },
     { name: 'C#', value: 65 },
   ];
