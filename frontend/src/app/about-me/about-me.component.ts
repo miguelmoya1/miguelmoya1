@@ -12,7 +12,7 @@ export class AboutMeComponent implements OnInit {
 
   public table = [
     { header: 'age', value: this.calculateAge(new Date(1995, 1, 8)) },
-    { header: 'residence', value: 'ES' },
+    { header: 'residence', value: 'Spain' },
     { header: 'address', value: 'San Vicente del raspeig, Spain' },
   ];
 
