@@ -2,13 +2,12 @@
 
 .content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
 
-  position: absolute;
   z-index: 9;
-
-  top: 2rem;
-  left: -5rem;
+  top: 0;
+  right: 0;
+  width: 100vw;
 
   border-radius: 8px;
   background-color: $background-secondary;
@@ -62,5 +61,19 @@
         font-size: 0.75rem;
       }
     }
+  }
+}
+
+@media screen and (min-width: 426px) {
+  .content {
+    flex-direction: column;
+
+    position: absolute;
+    z-index: 9;
+
+    top: 2rem;
+    left: -5rem;
+
+    width: fit-content;
   }
 }
