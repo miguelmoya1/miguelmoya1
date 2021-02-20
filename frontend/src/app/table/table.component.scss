@@ -13,15 +13,19 @@
     .header {
       color: $primary;
       text-transform: uppercase;
-      width: 25%;
+      width: 35%;
     }
 
     .value {
-      width: 75%;
       color: $white;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+
+      a {
+        text-decoration: none;
+        color: $primary;
+      }
     }
   }
 }
@@ -29,5 +33,11 @@
 @media screen and (min-width: 426px) {
   .content {
     grid-template-columns: 1fr 1fr;
+
+    .item {
+      .header {
+        width: 30% !important;
+      }
+    }
   }
 }

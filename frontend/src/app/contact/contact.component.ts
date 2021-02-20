@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
   public info = [
     { header: 'Adress', value: 'San Vicente del Raspeig' },
-    { header: 'Email', value: 'miguelmoyaortega@gmail.com' },
-    { header: 'Phone', value: '+34 646 74 95 70' },
+    { header: 'Email', value: 'miguelmoyaortega@gmail.com', type: 'mailto:' },
+    { header: 'Phone', value: '+34 646 74 95 70', type: 'tel:' },
     // {header: '', value: ''},
   ];
   constructor() {}

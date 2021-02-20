@@ -10,7 +10,20 @@ export class AboutMeComponent implements OnInit {
   public date = new Date().getFullYear() - new Date('01/03/2017').getFullYear();
   public imageSize = window.innerWidth * 0.3;
 
+  public table = [
+    { header: 'age', value: this.calculateAge(new Date(1995, 1, 8)) },
+    { header: 'residence', value: 'ES' },
+    { header: 'address', value: 'San Vicente del raspeig, Spain' },
+  ];
+
   constructor() {}
+
+  calculateAge(birthday: Date) {
+    // birthday is a date
+    var ageDifMs = Date.now() - birthday.getTime();
+    var ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
+  }
 
   ngOnInit() {}
 }

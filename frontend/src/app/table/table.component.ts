@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-type IData = { header: string; value: string | number };
+type IData = { header: string; value: string | number; type?: string };
 
 @Component({
   selector: 'app-table',
