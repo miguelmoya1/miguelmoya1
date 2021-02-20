@@ -9,7 +9,7 @@ import { IRoutes } from './shared/types/routes';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public actualPage: IRoutes = 'about';
+  public actualPage: IRoutes = 'contact';
 
   changeRoute(actualPage: IRoutes) {
     this.actualPage = actualPage;
