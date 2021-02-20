@@ -47,7 +47,7 @@
       }
 
       .tabs-content {
-        padding: 3rem;
+        padding: 1rem;
       }
     }
   }
@@ -70,6 +70,10 @@
 
       .content {
         height: 645px;
+
+        .tabs-content {
+          padding: 2rem;
+        }
       }
     }
   }
