@@ -12,20 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   box-shadow: 10px 10px 15px rgb(0 0 0 / 10%);
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: -12px;
-    top: -12px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-
-    background: $background-secondary-opacity;
-    border-radius: 8px;
-  }
 
   .header {
     top: 0;
@@ -88,5 +76,18 @@
 @media screen and (min-width: 426px) {
   .content {
     width: 480px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: -12px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      background: $background-secondary-opacity;
+      border-radius: 8px;
+    }
   }
 }
