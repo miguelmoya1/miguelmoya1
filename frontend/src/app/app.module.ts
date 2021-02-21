@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ContactComponent } from './contact/contact.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TableComponent } from './table/table.component';
+import { BackgroundComponent } from './background/background.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TableComponent } from './table/table.component';
     MenuComponent,
     ContactComponent,
     TableComponent,
+    BackgroundComponent,
   ],
   imports: [
     HttpClientModule,
