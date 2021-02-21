@@ -1,0 +1,5 @@
+<div class="content" *ngIf="boxes.length !== 0">
+  <div class="box"
+    [ngStyle]="{left: box.left, width: box.size, height: box.size, animation: 'goTop infinite linear ' + box.speedTop + 's, rotating infinite linear ' + box.speedRotate + 's'}"
+    *ngFor="let box of boxes"></div>
+</div>
