@@ -26,13 +26,14 @@
     }
 
     app-profile {
-      height: 45vh;
+      height: 480px;
       z-index: 1;
       margin-bottom: 1rem;
     }
 
     .content {
       width: 100%;
+      max-width: 480px;
 
       background-color: $background-secondary;
 
@@ -67,7 +68,7 @@
 
       .content {
         height: 645px;
-        width: 100%;
+        max-width: 100%;
 
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
