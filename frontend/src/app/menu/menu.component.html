@@ -1,24 +1,25 @@
 <div class="content">
   <div class="button">
-    <a (click)="change('about')" [ngClass]="{active: actualRoute === 'about'}">
+    <a [routerLink]="['/about-me']" routerLinkActive="router-link-active"
+      [ngClass]="{active: actualRoute === 'about-me'}">
       <mat-icon>person</mat-icon>
       ABOUT
     </a>
   </div>
   <div class="button">
-    <a (click)="change('aptitudes')" [ngClass]="{active: actualRoute === 'aptitudes'}">
+    <a [routerLink]="['/aptitudes']" [ngClass]="{active: actualRoute === 'aptitudes'}">
       <mat-icon>handyman</mat-icon>
       APTITUDES
     </a>
   </div>
   <div class="button">
-    <a (click)="change('resume')" [ngClass]="{active: actualRoute === 'resume'}">
+    <a [routerLink]="['/resume']" [ngClass]="{active: actualRoute === 'resume'}">
       <mat-icon>build</mat-icon>
       RESUME
     </a>
   </div>
   <div class="button">
-    <a (click)="change('contact')" [ngClass]="{active: actualRoute === 'contact'}">
+    <a [routerLink]="['/contact']" [ngClass]="{active: actualRoute === 'contact'}">
       <mat-icon>alternate_email</mat-icon>
       CONTACT
     </a>

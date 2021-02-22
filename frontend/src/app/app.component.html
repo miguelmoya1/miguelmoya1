@@ -1,20 +1,11 @@
 <div class="container">
   <main>
-    <app-menu (changeRoute)="changeRoute($event)"></app-menu>
+    <app-menu></app-menu>
     <app-profile></app-profile>
 
     <div class="content">
-      <div class="tabs-content" [@openClose] *ngIf="actualPage === 'about'">
-        <app-about-me></app-about-me>
-      </div>
-      <div class="tabs-content" [@openClose] *ngIf="actualPage === 'resume'">
-        <app-resume></app-resume>
-      </div>
-      <div class="tabs-content" [@openClose] *ngIf="actualPage === 'aptitudes'">
-        <app-aptitudes></app-aptitudes>
-      </div>
-      <div class="tabs-content" [@openClose] *ngIf="actualPage === 'contact'">
-        <app-contact></app-contact>
+      <div class="tabs-content">
+        <router-outlet></router-outlet>
       </div>
     </div>
 

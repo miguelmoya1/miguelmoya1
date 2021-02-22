@@ -2,12 +2,27 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  // { path: '', component: AppComponent, pathMatch: 'full' },
-  // {
-  // path: 'game',
-  // // canActivate: [IsLogged],
-  // loadChildren: () => import('./game/game.module').then((m) => m.GameModule),
-  // },
+  { path: '', redirectTo: 'about-me', pathMatch: 'full' },
+  {
+    path: 'about-me',
+    loadChildren: () =>
+      import('./about-me/about-me.module').then((m) => m.AboutMeModule),
+  },
+  {
+    path: 'aptitudes',
+    loadChildren: () =>
+      import('./aptitudes/aptitudes.module').then((m) => m.AptitudesModule),
+  },
+  {
+    path: 'resume',
+    loadChildren: () =>
+      import('./resume/resume.module').then((m) => m.ResumeModule),
+  },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./contact/contact.module').then((m) => m.ContactModule),
+  },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 

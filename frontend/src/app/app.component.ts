@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { openClose } from './shared/animations/openClose.aimation';
-import { IRoutes } from './shared/types/routes';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,4 @@ import { IRoutes } from './shared/types/routes';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  public actualPage: IRoutes = 'about';
-
-  changeRoute(actualPage: IRoutes) {
-    this.actualPage = actualPage;
-  }
-}
+export class AppComponent {}
