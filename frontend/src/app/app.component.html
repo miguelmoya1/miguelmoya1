@@ -3,9 +3,9 @@
     <app-menu></app-menu>
     <app-profile></app-profile>
 
-    <div class="content">
+    <div class="content" [@openClose]="name">
       <div class="tabs-content">
-        <router-outlet></router-outlet>
+        <router-outlet (activate)='setNamePage()'></router-outlet>
       </div>
     </div>
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { openClose } from './shared/animations/openClose.aimation';
 
 @Component({
@@ -7,4 +8,11 @@ import { openClose } from './shared/animations/openClose.aimation';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {}
+export class AppComponent {
+  name!: string;
+  constructor(private router: Router) {}
+
+  public setNamePage() {
+    this.name = this.router.url.replace(/\//g, '');
+  }
+}

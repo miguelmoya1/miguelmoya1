@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { IRoutes } from '../shared/types/routes';
@@ -9,7 +9,6 @@ import { IRoutes } from '../shared/types/routes';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  @Output() changeRoute = new EventEmitter<IRoutes>();
   actualRoute!: IRoutes;
 
   constructor(private router: Router) {
