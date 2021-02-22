@@ -1,7 +1,6 @@
 @import "./shared/style.scss";
 
 .container {
-  height: 100vh;
   min-height: 100%;
 
   display: flex;
@@ -49,6 +48,7 @@
 
 @media screen and (min-width: 1440px) {
   .container {
+    height: 100vh;
     justify-content: center;
     align-items: center;
 
