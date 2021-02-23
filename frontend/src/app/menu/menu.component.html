@@ -1,7 +1,7 @@
 <div class="content">
   <div class="button">
     <a [routerLink]="['/about-me']" routerLinkActive="router-link-active"
-      [ngClass]="{active: actualRoute === 'about-me'}">
+      [ngClass]="{active: actualRoute === 'about-me' || actualRoute === ''}">
       <mat-icon>person</mat-icon>
       ABOUT
     </a>
