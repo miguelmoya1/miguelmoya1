@@ -1,9 +1,8 @@
 import { trigger, style, transition, animate } from '@angular/animations';
 
 export const openClose = trigger('openClose', [
-  transition(':enter', [
-    style({ opacity: 0, transform: 'translateX(-100%)' }),
-    animate(200, style({ opacity: 1, transform: 'translateX(0)' })),
+  transition('* <=> *', [
+    style({ transform: 'scaleX(0)', 'transform-origin': 'left' }),
+    animate('400ms ease', style({ transform: 'scaleX(1)' })),
   ]),
-  transition(':leave', [style({ opacity: 0 })]),
 ]);

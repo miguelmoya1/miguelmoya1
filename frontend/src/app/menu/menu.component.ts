@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 import { IRoutes } from '../shared/types/routes';
 
 @Component({
@@ -7,13 +9,13 @@ import { IRoutes } from '../shared/types/routes';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  @Output() changeRoute = new EventEmitter<IRoutes>();
-  actualRoute: IRoutes = 'about';
+  actualRoute!: IRoutes;
 
-  constructor() {}
-
-  public change(route: IRoutes) {
-    this.actualRoute = route;
-    this.changeRoute.emit(this.actualRoute);
+  constructor(private router: Router) {
+    this.router.events
+      .pipe(filter<any>((event) => event instanceof NavigationEnd))
+      .subscribe(
+        (event) => (this.actualRoute = event.url.replace(/\//gi, '') as IRoutes)
+      );
   }
 }
