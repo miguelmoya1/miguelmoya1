@@ -29,5 +29,6 @@ jobs:
             cd miguelmoya1/frontend
             npm i --loglevel=error
             npm run build
+            rm -r /var/www/miguelmo/*
             cp -r dist/miguelmoya1/* /var/www/miguelmo
             cp -r node_modules /var/www/miguelmo
