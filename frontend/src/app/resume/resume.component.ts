@@ -7,6 +7,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
   public title = 'Resume';
+  public experience = [
+    {
+      title: 'Boon Agency.',
+      subtitle: 'Full Stack Developer',
+      years: '2018 - now',
+    },
+    {
+      title: 'Conwork | Partner i+d+i tecnológico.',
+      subtitle: 'Full Stack Developer',
+      years: '2017 - 2018',
+    },
+  ];
+  public education = [
+    {
+      title: 'IES San Vicente del Raspeig.',
+      subtitle: 'Técnico Superior en Desarrollo de Aplicaciones Web',
+      years: '2015 - 2017',
+    },
+    {
+      title: 'IES San Vicente del Raspeig.',
+      subtitle: 'Técnico en Sistemas Microinformáticos y Redes',
+      years: '2012 - 2015',
+    },
+    {
+      title: 'IES San Vicente del Raspeig.',
+      subtitle: 'Graduado escolar',
+      years: '2007 - 2012',
+    },
+  ];
   constructor() {}
 
   ngOnInit() {}

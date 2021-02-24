@@ -41,12 +41,12 @@
 
       text-decoration: none;
       color: $white;
-      font-size: 0.65rem;
+      font-size: 10px;
 
       &:hover,
       &.active {
         color: $primary;
-        font-size: 0.75rem;
+        font-size: 12px;
       }
     }
   }
