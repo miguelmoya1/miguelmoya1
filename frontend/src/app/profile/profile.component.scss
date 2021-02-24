@@ -55,6 +55,7 @@
     justify-content: center;
     align-items: center;
 
+    margin-top: 15rem;
     z-index: 1;
 
     img {
@@ -69,6 +70,15 @@
       margin: 0;
       color: $primary;
       font-weight: bold;
+    }
+
+    .links {
+      margin-top: 2rem;
+      width: 125px;
+
+      display: flex;
+      justify-content: space-between;
+      color: $white;
     }
   }
 }
