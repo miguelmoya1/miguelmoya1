@@ -26,6 +26,7 @@ export class AptitudesComponent implements OnInit {
     { name: 'Ionic', value: 10 },
     { name: 'Node', value: 9 },
     { name: 'Nestjs', value: 9 },
+    { name: 'Nextjs', value: 9 },
     { name: 'React', value: 9 },
     { name: 'React-native', value: 8 },
   ];

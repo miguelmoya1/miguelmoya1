@@ -30,11 +30,6 @@ export class ResumeComponent implements OnInit {
       subtitle: 'Técnico en Sistemas Microinformáticos y Redes',
       years: '2012 - 2015',
     },
-    {
-      title: 'IES San Vicente del Raspeig.',
-      subtitle: 'Graduado escolar',
-      years: '2007 - 2012',
-    },
   ];
   constructor() {}
 
