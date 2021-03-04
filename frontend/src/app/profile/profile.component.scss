@@ -79,6 +79,21 @@
       display: flex;
       justify-content: space-between;
       color: $white;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          transition: 1s;
+          fill: $white;
+
+          &:hover {
+            fill: $primary;
+          }
+        }
+      }
     }
   }
 }
