@@ -27,6 +27,7 @@
     app-profile {
       height: 480px;
       z-index: 1;
+      margin-top: 1rem;
       margin-bottom: 1rem;
     }
 
@@ -64,6 +65,7 @@
 
       app-profile {
         height: 100%;
+        margin-top: 0;
       }
 
       .content {
