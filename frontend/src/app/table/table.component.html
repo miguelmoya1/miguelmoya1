@@ -3,7 +3,7 @@
     <div class="header">{{item.header}}: </div>
 
     <div class="value">
-      <a [target]="item.type === 'tel:' ? '_self': '_blanck'" [href]="item.type + item.value"
+      <a [target]="item.type === 'tel:' ? '_self': '_blank'" [href]="item.type + item.value"
         *ngIf="item.type; else default">{{item.value}}</a>
       <ng-template #default>{{item.value}}</ng-template>
     </div>
