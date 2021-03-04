@@ -1,73 +1,43 @@
 @import "../shared/style.scss";
 
-$mBottom: 6rem;
-
-.languages {
-  padding-left: 1rem;
-  margin-bottom: $mBottom;
-
-  .full-bar {
-    width: 100%;
-    height: 8px;
-    border-radius: 8px;
-
-    background-color: $background;
-    position: relative;
-
-    .progress {
-      height: 8px;
-      position: absolute;
-      border-radius: 8px;
-
-      background-color: $primary;
-    }
-  }
-}
-
-.coding {
-  padding-left: 1rem;
-  margin-bottom: $mBottom;
-
-  .dots-container {
-    display: flex;
-    justify-content: space-between;
-
-    .dot {
-      width: 20px;
-      height: 20px;
-      border-radius: 50px;
-
-      background-color: $background;
-
-      &.color {
-        background-color: $primary;
-      }
-    }
-  }
-}
-
+.languages,
+.coding,
 .programming {
-  margin-bottom: $mBottom;
-  margin-top: 2rem;
-
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 
-  .p-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.aptitude {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    .percentage {
-      position: relative;
-      top: -5rem;
+  flex-direction: column;
+
+  h2 {
+    transition: 1s;
+    color: transparent;
+  }
+
+  &:hover {
+    h2 {
+      color: $primary;
     }
+  }
+}
 
-    h3 {
-      margin-top: -3rem;
-      margin-bottom: 3rem;
-      position: relative;
-    }
+@media only screen and (min-width: 375px) {
+  .languages,
+  .programming,
+  .coding {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .coding {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

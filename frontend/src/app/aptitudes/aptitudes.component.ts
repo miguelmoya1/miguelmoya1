@@ -14,7 +14,7 @@ type Aptitude = {
 })
 export class AptitudesComponent implements OnInit {
   public title = 'Aptitudes';
-  public totalDots = Array(10);
+  public size = 125;
 
   public languages: Aptitude[] = [
     { name: 'Spanish', value: 100 },
@@ -22,12 +22,7 @@ export class AptitudesComponent implements OnInit {
   ];
 
   public frameworks: Aptitude[] = [
-    { name: 'Angular', value: 10 },
-    { name: 'Ionic', value: 10 },
-    { name: 'Node', value: 9 },
-    { name: 'Nestjs', value: 9 },
     { name: 'Nextjs', value: 9 },
-    { name: 'React', value: 9 },
     { name: 'React-native', value: 8 },
   ];
 
