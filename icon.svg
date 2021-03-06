@@ -1,0 +1,6 @@
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <rect height="6" width="800" y="395" x="0" fill="#999999"/>
+  <rect transform="rotate(-45 235,400)" height="265" width="265" y="265" x="102" fill="#999999"/>
+  <rect transform="rotate(-45 565,400)" height="265" width="265" y="265" x="434" fill="#999999"/>
+  <rect transform="rotate(-45 400,400)" height="400" width="400" y="200" x="200" fill="#b2b2b2"/>
+</svg>
