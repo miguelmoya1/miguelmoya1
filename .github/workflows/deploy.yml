@@ -3,9 +3,9 @@ name: Upload server
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Connect with ssh
+      - name: Deploy the server
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -29,5 +29,7 @@ jobs:
             cd miguelmoya1/frontend
             npm i --loglevel=error
             npm run build
+            rm -r /var/www/miguelmo/*
             cp -r dist/miguelmoya1/* /var/www/miguelmo
             cp -r node_modules /var/www/miguelmo
+            echo -e "User-Agent: * \nAllow: /" > /var/www/miguelmo/robots.txt

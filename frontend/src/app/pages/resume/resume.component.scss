@@ -1,0 +1,44 @@
+@import "../../shared/style.scss";
+.item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: $white;
+
+  margin-bottom: 4rem;
+  margin-left: 2rem;
+
+  .title {
+    color: $primary;
+    margin: 1rem 0 0.5rem;
+    max-width: 75%;
+    font-size: 16px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .subtitle {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .years {
+    right: 0;
+    top: 1rem;
+    font-size: 0.6rem;
+    border-radius: 4px;
+    color: $grey;
+    position: absolute;
+
+    border: solid 1px $white;
+    border-color: $grey;
+    padding: 0.3rem;
+
+    &.active {
+      color: $primary;
+      border-color: $primary;
+    }
+  }
+}

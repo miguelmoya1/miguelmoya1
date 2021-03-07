@@ -32,7 +32,7 @@ const syncExec = (command) => {
       console.log('NOT NECESARY TO CLONE...');
     }
     console.log(`GIT STASH... (${folder})`);
-    await syncExec(`cd ${folder} && git stash `);
+    await syncExec(`cd ${folder} && git stash`);
 
     console.log(`GIT PULL... (${folder})`);
     await syncExec(`cd ${folder} && git pull`);

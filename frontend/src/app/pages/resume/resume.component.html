@@ -1,0 +1,15 @@
+<app-title [title]="'Experience'"> </app-title>
+
+<div class="item" *ngFor="let experience of experience; let i = index;">
+  <h3 class="title">{{experience.title}}</h3>
+  <h4 class="subtitle">{{experience.subtitle}}</h4>
+  <div class="years" [ngClass]="{active: i === 0}">{{experience.years}}</div>
+</div>
+
+<app-title [title]="'Studies'"></app-title>
+
+<div class="item" *ngFor="let study of education">
+  <h3 class="title">{{study.title}}</h3>
+  <h4 class="subtitle">{{study.subtitle}}</h4>
+  <div class="years">{{study.years}}</div>
+</div>
