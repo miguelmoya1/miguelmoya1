@@ -1,4 +1,4 @@
-@import "../shared/style.scss";
+@import "../../shared/style.scss";
 
 .content {
   height: 100%;
@@ -23,7 +23,7 @@
 
     position: absolute;
 
-    background: url(../../assets/header.webp);
+    background: url(../../../assets/header.webp);
     border-radius: 8px;
     background-size: 100% 100%;
 

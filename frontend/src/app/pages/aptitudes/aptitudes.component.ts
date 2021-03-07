@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { openClose } from '../shared/animations/openClose.aimation';
+import { openClose } from '../../shared/animations/openClose.aimation';
 
 type Aptitude = {
   name: string;

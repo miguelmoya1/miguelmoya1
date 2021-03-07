@@ -31,6 +31,7 @@ export class ResumeComponent implements OnInit {
       years: '2012 - 2015',
     },
   ];
+
   constructor() {}
 
   ngOnInit() {}

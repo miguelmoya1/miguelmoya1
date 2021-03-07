@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AptitudesComponent } from './aptitudes.component';
 import { RouterModule } from '@angular/router';
-import { TitleModule } from '../title/title.module';
+import { TitleModule } from '../../components/title/title.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({

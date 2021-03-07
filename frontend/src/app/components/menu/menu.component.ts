@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { IRoutes } from '../shared/types/routes';
+import { IRoutes } from '../../shared/types/routes';
 
 @Component({
   selector: 'app-menu',

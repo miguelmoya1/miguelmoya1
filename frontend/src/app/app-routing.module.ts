@@ -6,22 +6,24 @@ const routes: Routes = [
   {
     path: 'about-me',
     loadChildren: () =>
-      import('./about-me/about-me.module').then((m) => m.AboutMeModule),
+      import('./pages/about-me/about-me.module').then((m) => m.AboutMeModule),
   },
   {
     path: 'aptitudes',
     loadChildren: () =>
-      import('./aptitudes/aptitudes.module').then((m) => m.AptitudesModule),
+      import('./pages/aptitudes/aptitudes.module').then(
+        (m) => m.AptitudesModule
+      ),
   },
   {
     path: 'resume',
     loadChildren: () =>
-      import('./resume/resume.module').then((m) => m.ResumeModule),
+      import('./pages/resume/resume.module').then((m) => m.ResumeModule),
   },
   {
     path: 'contact',
     loadChildren: () =>
-      import('./contact/contact.module').then((m) => m.ContactModule),
+      import('./pages/contact/contact.module').then((m) => m.ContactModule),
   },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
