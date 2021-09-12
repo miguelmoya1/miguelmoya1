@@ -1,11 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-resume',
-  templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.scss'],
+  template: `
+    <app-page>
+      <div class="mb-16" *ngFor="let study of resumes">
+        <app-title [title]="study.title"></app-title>
+
+        <div
+          class="flex flex-col relative my-4"
+          *ngFor="let experience of study.data; let i = index"
+        >
+          <div
+            class="w-8/12 text-blue-500 font-bold text-lg overflow-ellipsis overflow-hidden whitespace-nowrap"
+          >
+            {{ experience.title }}
+          </div>
+          <div class="text-sm text-gray-400 italic">
+            {{ experience.subtitle }}
+          </div>
+          <div
+            class="absolute right-0 top-0 text-xs text-gray-600 border-gray-600 p-1 border rounded"
+            [ngClass]="{
+              'text-blue-500 border-blue-500': i === 0 && study.first
+            }"
+          >
+            {{ experience.years }}
+          </div>
+        </div>
+      </div>
+    </app-page>
+  `,
 })
-export class ResumeComponent implements OnInit {
+export class ResumeComponent {
   public title = 'Resume';
   public experience = [
     {
@@ -31,8 +58,8 @@ export class ResumeComponent implements OnInit {
       years: '2012 - 2015',
     },
   ];
-
-  constructor() {}
-
-  ngOnInit() {}
+  public resumes = [
+    { title: 'Experience', data: this.experience, first: true },
+    { title: 'Studies', data: this.education },
+  ];
 }
