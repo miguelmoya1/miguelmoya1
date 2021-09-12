@@ -5,11 +5,63 @@ import { IRoutes } from '../../shared/types/routes';
 
 @Component({
   selector: 'app-menu',
-  templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.scss'],
+  template: `
+    <app-page>
+      <div class="flex justify-between items-center gap-4">
+        <ng-container *ngFor="let route of routes">
+          <a
+            [routerLink]="route.route"
+            routerLinkActive="router-link-active"
+            [ngClass]="{
+              'text-blue-500':
+                actualRoute === route.name[0] || actualRoute === route.name[1]
+            }"
+            class="flex flex-col items-center justify-center text-gray-200"
+          >
+            <mat-icon>{{ route.icon }}</mat-icon>
+            <div class="text-xs">
+              {{ route.title }}
+            </div>
+          </a>
+        </ng-container>
+      </div>
+    </app-page>
+  `,
 })
 export class MenuComponent {
   actualRoute!: IRoutes;
+  routes = [
+    {
+      name: ['about-me', ''],
+      route: ['/about-me'],
+      icon: 'person',
+      title: 'About me',
+    },
+    {
+      name: ['aptitudes'],
+      route: ['/aptitudes'],
+      icon: 'handyman',
+      title: 'Aptitudes',
+    },
+    {
+      name: ['resume'],
+      route: ['/resume'],
+      icon: 'build',
+      title: 'Resume',
+    },
+    {
+      name: ['projects'],
+      route: ['/projects'],
+      icon: 'work',
+      title: 'Projects',
+    },
+    {
+      name: ['contact'],
+      route: ['/contact'],
+      icon: 'alternate_email',
+      title: 'Contact',
+    },
+  ];
 
   constructor(private router: Router) {
     this.router.events

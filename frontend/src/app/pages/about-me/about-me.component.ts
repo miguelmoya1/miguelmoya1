@@ -2,8 +2,21 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about-me',
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss'],
+  template: `
+    <app-page>
+      <app-title [title]="title"></app-title>
+
+      <div class="text-sm text-gray-200 my-4 text-justify">
+        My name is Miguel Moya Ortega. I'm a Full Stack Developer based in San
+        Vicente del Raspeig, Spain, and I'm very passionate and dedicated to my
+        work. With {{ date }} years experience as a professional Full Stack
+        Developer, I have acquired the skills necessary to build great and
+        premium websites, apps and services.
+      </div>
+
+      <app-table [data]="table"></app-table>
+    </app-page>
+  `,
 })
 export class AboutMeComponent implements OnInit {
   public title = 'About Me';

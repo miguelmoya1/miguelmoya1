@@ -2,11 +2,17 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-title',
-  templateUrl: './title.component.html',
-  styleUrls: ['./title.component.scss'],
+  template: `
+    <div class="relative my-4 flex items-center">
+      <div class="text-2xl text-center text-blue-500 font-bold">
+        {{ title?.charAt(0) }}
+      </div>
+      <div class="text-gray-200 text-2xl font-bold">
+        {{ title?.slice(1) }}
+      </div>
+    </div>
+  `,
 })
 export class TitleComponent {
   @Input() title!: string;
-
-  constructor() {}
 }
