@@ -6,8 +6,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { TitleComponent } from './title/title.component';
 import { TableComponent } from './table/table.component';
+import { SvgComponent } from './svg/svg.component';
 
-const all = [PageComponent, MenuComponent, TitleComponent, TableComponent];
+const all = [
+  PageComponent,
+  MenuComponent,
+  TitleComponent,
+  TableComponent,
+  SvgComponent,
+];
 
 @NgModule({
   declarations: [...all],

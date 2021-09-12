@@ -1,39 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Types } from '../../components/svg/svg.component';
 import { openClose } from '../../shared/animations/openClose.aimation';
 
 type Aptitude = {
-  name: string;
-  value: number;
+  title: string;
+  value: Types;
 };
 
 @Component({
   selector: 'app-aptitudes',
-  templateUrl: './aptitudes.component.html',
-  styleUrls: ['./aptitudes.component.scss'],
+  template: `
+    <app-page>
+      <app-title [title]="'Frameworks'"></app-title>
+
+      <ng-container *ngFor="let aptitude of aptitudes">
+        <div class="aptitude" *ngFor="let data of aptitude.data">
+          <app-svg [type]="data.value"></app-svg>
+          <h2 class="title">{{ data.title }}</h2>
+        </div>
+      </ng-container>
+    </app-page>
+  `,
   animations: [openClose],
 })
-export class AptitudesComponent implements OnInit {
+export class AptitudesComponent {
   public title = 'Aptitudes';
-  public size = 125;
 
-  public languages: Aptitude[] = [
-    { name: 'Spanish', value: 100 },
-    { name: 'English', value: 80 },
+  public aptitudes: { title: string; data: Aptitude[] }[] = [
+    {
+      title: 'Frameworks',
+      data: [
+        { title: 'Angular', value: 'angular' },
+        { title: 'Nestjs', value: 'nest' },
+        { title: 'Ionic', value: 'ionic' },
+      ],
+    },
   ];
-
-  public frameworks: Aptitude[] = [
-    { name: 'Nextjs', value: 9 },
-    { name: 'React-native', value: 8 },
-  ];
-
-  public programmingLanguage: Aptitude[] = [
-    { name: 'Javascript', value: 83 },
-    { name: 'Typescript', value: 91 },
-    { name: 'Java', value: 60 },
-    { name: 'C#', value: 65 },
-  ];
-
-  constructor() {}
-
-  ngOnInit() {}
 }
