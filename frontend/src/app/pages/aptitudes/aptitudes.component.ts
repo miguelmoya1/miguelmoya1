@@ -11,11 +11,10 @@ type Aptitude = {
   selector: 'app-aptitudes',
   template: `
     <app-page>
-      <app-title [title]="'Frameworks'"></app-title>
-
       <ng-container *ngFor="let aptitude of aptitudes">
+        <app-title [title]="aptitude.title"></app-title>
         <div
-          class="text-transparent hover:text-blue-500 flex flex-col items-center"
+          class="mt-4 text-transparent hover:text-blue-500 flex flex-col items-center"
           *ngFor="let data of aptitude.data"
         >
           <app-svg [type]="data.value"></app-svg>
@@ -38,6 +37,23 @@ export class AptitudesComponent {
         { title: 'Angular', value: 'angular' },
         { title: 'Nestjs', value: 'nest' },
         { title: 'Ionic', value: 'ionic' },
+        { title: 'Node', value: 'node' },
+        { title: 'React', value: 'react' },
+        { title: 'Nextjs', value: 'next' },
+      ],
+    },
+    {
+      title: 'Programming Languages',
+      data: [
+        { title: 'Typescript', value: 'typescript' },
+        { title: 'Javascript', value: 'javascript' },
+      ],
+    },
+    {
+      title: 'Languages',
+      data: [
+        { title: 'English', value: 'english' },
+        { title: 'Spanish', value: 'spanish' },
       ],
     },
   ];

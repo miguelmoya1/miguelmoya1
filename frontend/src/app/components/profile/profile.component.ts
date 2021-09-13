@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <app-page [withPadding]="false">
       <div
-        class="w-full h-64 rounded-t-xl"
+        class="w-full h-64 rounded-t-xl bg-no-repeat"
         [style.background-image]="'url(../../../assets/header.webp)'"
       ></div>
 
