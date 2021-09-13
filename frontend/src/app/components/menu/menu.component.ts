@@ -7,7 +7,7 @@ import { IRoutes } from '../../shared/types/routes';
   selector: 'app-menu',
   template: `
     <app-page>
-      <div class="flex justify-between items-center gap-4">
+      <div class="flex justify-between items-center gap-4 sm:flex-col">
         <ng-container *ngFor="let route of routes">
           <a
             [routerLink]="route.route"
@@ -19,7 +19,7 @@ import { IRoutes } from '../../shared/types/routes';
             class="flex flex-col items-center justify-center text-gray-200"
           >
             <mat-icon>{{ route.icon }}</mat-icon>
-            <div class="text-xs">
+            <div class="text-xs text-center">
               {{ route.title }}
             </div>
           </a>

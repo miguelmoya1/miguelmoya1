@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-profile',
   template: `
-    <app-page [withPadding]="false">
+    <app-page [withPadding]="false" addClass="mt-0">
       <div
         class="w-full h-64 rounded-t-xl bg-no-repeat"
         [style.background-image]="'url(../../../assets/header.webp)'"

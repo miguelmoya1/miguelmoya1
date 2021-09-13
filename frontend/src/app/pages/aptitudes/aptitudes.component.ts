@@ -10,17 +10,19 @@ type Aptitude = {
 @Component({
   selector: 'app-aptitudes',
   template: `
-    <app-page>
+    <app-page addClass="sm:max-h-96 sm:w-96">
       <ng-container *ngFor="let aptitude of aptitudes">
         <app-title [title]="aptitude.title"></app-title>
-        <div
-          class="mt-4 text-transparent hover:text-blue-500 flex flex-col items-center"
-          *ngFor="let data of aptitude.data"
-        >
-          <app-svg [type]="data.value"></app-svg>
-          <h2 class="duration-500 font-bold text-xl mt-4 mb-8">
-            {{ data.title }}
-          </h2>
+        <div class="grid sm:grid-cols-2 justify-center">
+          <div
+            class="mt-4 text-transparent hover:text-blue-500 grid "
+            *ngFor="let data of aptitude.data"
+          >
+            <app-svg [type]="data.value"></app-svg>
+            <h2 class="duration-500 font-bold text-xl mt-4 mb-8 text-center">
+              {{ data.title }}
+            </h2>
+          </div>
         </div>
       </ng-container>
     </app-page>
