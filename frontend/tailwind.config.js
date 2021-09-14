@@ -2,6 +2,7 @@ module.exports = {
   prefix: '',
   mode: 'jist',
   purge: {
+    enabled: true,
     content: [
       './src/**/*.{html,ts,js}',
     ]
