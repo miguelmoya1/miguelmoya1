@@ -1,28 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
-@import "./app/shared/style.scss";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-html,
-body {
-  background-color: $background;
-}
+div {
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
 
-body {
-  // height: 100%;
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-display: swap;
-  position: relative;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $white;
-}
-
-circle {
-  stroke: $primary !important;
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
 }

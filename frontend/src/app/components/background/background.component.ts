@@ -9,8 +9,50 @@ type Box = {
 
 @Component({
   selector: 'app-background',
-  templateUrl: './background.component.html',
-  styleUrls: ['./background.component.scss'],
+  template: `
+    <div
+      class="absolute h-full w-full min-h-screen top-0 overflow-hidden"
+      [style.z-index]="'-1'"
+      *ngIf="boxes.length !== 0"
+    >
+      <div
+        class="absolute opacity-10 rounded-xl bg-blue-500"
+        [ngStyle]="{
+          left: box.left,
+          width: box.size,
+          height: box.size,
+          animation:
+            'goTop infinite linear ' +
+            box.speedTop +
+            's, rotating infinite linear ' +
+            box.speedRotate +
+            's'
+        }"
+        *ngFor="let box of boxes"
+      ></div>
+    </div>
+  `,
+  styles: [
+    `
+      @keyframes goTop {
+        0% {
+          bottom: -30%;
+        }
+        100% {
+          bottom: 120%;
+        }
+      }
+
+      @keyframes rotating {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    `,
+  ],
 })
 export class BackgroundComponent implements OnInit {
   public boxes: Box[] = new Array(20).fill({});

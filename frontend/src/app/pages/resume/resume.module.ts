@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ResumeComponent } from './resume.component';
 import { RouterModule } from '@angular/router';
-import { TitleModule } from '../../components/title/title.module';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [ResumeComponent],
   imports: [
     CommonModule,
-    TitleModule,
+    ComponentsModule,
     RouterModule.forChild([{ path: '', component: ResumeComponent }]),
   ],
 })
