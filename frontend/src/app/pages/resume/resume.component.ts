@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
         <app-title [title]="study.title"></app-title>
 
         <div
-          class="flex flex-col relative my-4"
+          class="flex flex-col relative my-12 mx-2"
           *ngFor="let experience of study.data; let i = index"
         >
           <div

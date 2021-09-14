@@ -3,25 +3,31 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-profile',
   template: `
-    <app-page [withPadding]="false" addClass="mt-0">
+    <div
+      class="mx-auto w-11/12 rounded-xl bg-gray-800 z-10 sm:h-170 sm:w-120 shadow"
+    >
       <div
-        class="w-full h-64 rounded-t-xl bg-no-repeat"
+        class="w-full rounded-t-xl bg-no-repeat h-96"
         [style.background-image]="'url(../../../assets/header.webp)'"
       ></div>
 
-      <div class="m-4">
+      <div class="m-4 mt-10">
         <div class="flex flex-col items-center m-4">
-          <h1 class="text-xl text-white">Miguel Moya Ortega</h1>
-          <div class="text-xs text-gray-400 italic">Full Stack Developer</div>
+          <h1 class="text-xl sm:text-3xl text-white font-bold">
+            Miguel Moya Ortega
+          </h1>
+          <div class="text-gray-400 italic mt-4">Full Stack Developer</div>
         </div>
-        <div class="flex justify-evenly text-gray-200 py-4">
+        <div
+          class="flex justify-evenly text-gray-200 py-4 xl:justify-center xl: gap-4"
+        >
           <a
             href="https://github.com/miguelmoya1"
             target="_blank"
             rel="noopener noreferrer"
           >
             <svg
-              class="h-8 w-8 fill-current text-gray-200 hover:text-blue-500"
+              class="h-8 w-8 fill-current text-gray-200 hover:text-blue-500 transition"
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
@@ -38,7 +44,7 @@ import { Component } from '@angular/core';
             rel="noopener noreferrer"
           >
             <svg
-              class="h-8 w-8 fill-current text-gray-200 hover:text-blue-500"
+              class="h-8 w-8 fill-current text-gray-200 hover:text-blue-500 transition"
               xmlns="http://www.w3.org/2000/svg"
               width="32"
               height="32"
@@ -55,7 +61,7 @@ import { Component } from '@angular/core';
             rel="noopener noreferrer"
           >
             <svg
-              class="h-8 w-8 fill-current text-gray-200 hover:text-blue-500"
+              class="h-8 w-8 fill-current text-gray-200 hover:text-blue-500 transition"
               xmlns="http://www.w3.org/2000/svg"
               width="36"
               height="36"
@@ -68,7 +74,7 @@ import { Component } from '@angular/core';
           </a>
         </div>
       </div>
-    </app-page>
+    </div>
   `,
 })
 export class ProfileComponent {}

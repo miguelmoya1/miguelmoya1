@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <app-page>
       <app-title [title]="title"></app-title>
 
-      <div class="text-sm text-gray-200 my-4 text-justify">
+      <div class="text-gray-200 my-8 text-justify">
         My name is Miguel Moya Ortega. I'm a Full Stack Developer based in San
         Vicente del Raspeig, Spain, and I'm very passionate and dedicated to my
         work. With {{ date }} years experience as a professional Full Stack

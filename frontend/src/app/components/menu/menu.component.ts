@@ -6,8 +6,10 @@ import { IRoutes } from '../../shared/types/routes';
 @Component({
   selector: 'app-menu',
   template: `
-    <app-page>
-      <div class="flex justify-between items-center gap-4 sm:flex-col">
+    <div
+      class="mx-auto w-11/12 my-4 rounded-xl sm:w-120 xl:w-11/12 bg-gray-800 z-10 p-4"
+    >
+      <div class="flex justify-between items-center gap-4 xl:flex-col">
         <ng-container *ngFor="let route of routes">
           <a
             [routerLink]="route.route"
@@ -25,7 +27,7 @@ import { IRoutes } from '../../shared/types/routes';
           </a>
         </ng-container>
       </div>
-    </app-page>
+    </div>
   `,
 })
 export class MenuComponent {
