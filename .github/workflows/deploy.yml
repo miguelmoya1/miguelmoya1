@@ -27,8 +27,8 @@ jobs:
           script: |
             node gitCheck.js https://github.com/miguelmoya1/miguelmoya1.git
             cd miguelmoya1/frontend
-            npm i --loglevel=error
-            npm run build
+            yarn
+            yarn build
             rm -r /var/www/miguelmo/*
             cp -r dist/miguelmoya1/* /var/www/miguelmo
             cp -r node_modules /var/www/miguelmo
