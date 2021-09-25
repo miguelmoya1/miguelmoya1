@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AptitudesComponent } from './aptitudes.component';
 import { RouterModule } from '@angular/router';
-import { TitleModule } from '../../components/title/title.module';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   declarations: [AptitudesComponent],
   imports: [
     CommonModule,
-    TitleModule,
+    ComponentsModule,
     MatProgressSpinnerModule,
     RouterModule.forChild([{ path: '', component: AptitudesComponent }]),
   ],

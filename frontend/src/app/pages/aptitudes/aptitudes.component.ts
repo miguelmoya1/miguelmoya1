@@ -1,39 +1,62 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Types } from '../../components/svg/svg.component';
 import { openClose } from '../../shared/animations/openClose.aimation';
 
 type Aptitude = {
-  name: string;
-  value: number;
+  title: string;
+  value: Types;
 };
 
 @Component({
   selector: 'app-aptitudes',
-  templateUrl: './aptitudes.component.html',
-  styleUrls: ['./aptitudes.component.scss'],
+  template: `
+    <app-page>
+      <ng-container *ngFor="let aptitude of aptitudes">
+        <app-title [title]="aptitude.title"></app-title>
+        <div class="grid xl:grid-cols-2 justify-items-center">
+          <div
+            class="mt-4 text-transparent hover:text-blue-500 grid "
+            *ngFor="let data of aptitude.data"
+          >
+            <app-svg [type]="data.value"></app-svg>
+            <h2 class="duration-500 font-bold text-xl mt-4 mb-8 text-center">
+              {{ data.title }}
+            </h2>
+          </div>
+        </div>
+      </ng-container>
+    </app-page>
+  `,
   animations: [openClose],
 })
-export class AptitudesComponent implements OnInit {
+export class AptitudesComponent {
   public title = 'Aptitudes';
-  public size = 125;
 
-  public languages: Aptitude[] = [
-    { name: 'Spanish', value: 100 },
-    { name: 'English', value: 80 },
+  public aptitudes: { title: string; data: Aptitude[] }[] = [
+    {
+      title: 'Frameworks',
+      data: [
+        { title: 'Angular', value: 'angular' },
+        { title: 'Nestjs', value: 'nest' },
+        { title: 'Ionic', value: 'ionic' },
+        { title: 'Node', value: 'node' },
+        { title: 'React', value: 'react' },
+        { title: 'Nextjs', value: 'next' },
+      ],
+    },
+    {
+      title: 'Programming Languages',
+      data: [
+        { title: 'Typescript', value: 'typescript' },
+        { title: 'Javascript', value: 'javascript' },
+      ],
+    },
+    {
+      title: 'Languages',
+      data: [
+        { title: 'English', value: 'english' },
+        { title: 'Spanish', value: 'spanish' },
+      ],
+    },
   ];
-
-  public frameworks: Aptitude[] = [
-    { name: 'Nextjs', value: 9 },
-    { name: 'React-native', value: 8 },
-  ];
-
-  public programmingLanguage: Aptitude[] = [
-    { name: 'Javascript', value: 83 },
-    { name: 'Typescript', value: 91 },
-    { name: 'Java', value: 60 },
-    { name: 'C#', value: 65 },
-  ];
-
-  constructor() {}
-
-  ngOnInit() {}
 }
