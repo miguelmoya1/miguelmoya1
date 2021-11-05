@@ -55,23 +55,6 @@ import { Component } from '@angular/core';
               />
             </svg>
           </a>
-          <a
-            href="https://www.npmjs.com/~miguelmo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg
-              class="h-8 w-8 fill-current text-gray-200 hover:text-blue-500 transition"
-              xmlns="http://www.w3.org/2000/svg"
-              width="36"
-              height="36"
-              viewBox="0 0 32 32"
-            >
-              <path
-                d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h7V11h4v10h1a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3z"
-              />
-            </svg>
-          </a>
         </div>
       </div>
     </div>
