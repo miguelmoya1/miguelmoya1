@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-profile',
   template: `
     <div
-      class="rounded-xl bg-gray-800 sm:h-170 sm:w-120 m-4 flex flex-col justify-between"
+      class="rounded-xl bg-gray-800 sm:h-170 sm:w-120 mt-4 mx-auto w-11/12 xl:mr-0 flex flex-col justify-between"
     >
       <div
         class="w-full rounded-t-xl bg-no-repeat h-96"
