@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Types } from '../../components/svg/svg.component';
-import { openClose } from '../../shared/animations/openClose.aimation';
 
 type Aptitude = {
   title: string;
@@ -10,24 +9,21 @@ type Aptitude = {
 @Component({
   selector: 'app-aptitudes',
   template: `
-    <app-page>
-      <ng-container *ngFor="let aptitude of aptitudes">
-        <app-title [title]="aptitude.title"></app-title>
-        <div class="grid xl:grid-cols-2 justify-items-center">
-          <div
-            class="mt-4 text-transparent hover:text-blue-500 grid "
-            *ngFor="let data of aptitude.data"
-          >
-            <app-svg [type]="data.value"></app-svg>
-            <h2 class="duration-500 font-bold text-xl mt-4 mb-8 text-center">
-              {{ data.title }}
-            </h2>
-          </div>
+    <ng-container *ngFor="let aptitude of aptitudes">
+      <app-title [title]="aptitude.title"></app-title>
+      <div class="grid xl:grid-cols-2 justify-items-center">
+        <div
+          class="mt-4 text-transparent hover:text-blue-500 grid"
+          *ngFor="let data of aptitude.data"
+        >
+          <app-svg [type]="data.value"></app-svg>
+          <h2 class="duration-500 font-bold text-xl mt-4 mb-8 text-center">
+            {{ data.title }}
+          </h2>
         </div>
-      </ng-container>
-    </app-page>
+      </div>
+    </ng-container>
   `,
-  animations: [openClose],
 })
 export class AptitudesComponent {
   public title = 'Aptitudes';
@@ -44,19 +40,19 @@ export class AptitudesComponent {
         { title: 'Nextjs', value: 'next' },
       ],
     },
-    {
-      title: 'Programming Languages',
-      data: [
-        { title: 'Typescript', value: 'typescript' },
-        { title: 'Javascript', value: 'javascript' },
-      ],
-    },
-    {
-      title: 'Languages',
-      data: [
-        { title: 'English', value: 'english' },
-        { title: 'Spanish', value: 'spanish' },
-      ],
-    },
+    // {
+    //   title: 'Programming Languages',
+    //   data: [
+    //     { title: 'Typescript', value: 'typescript' },
+    //     { title: 'Javascript', value: 'javascript' },
+    //   ],
+    // },
+    // {
+    //   title: 'Languages',
+    //   data: [
+    //     { title: 'English', value: 'english' },
+    //     { title: 'Spanish', value: 'spanish' },
+    //   ],
+    // },
   ];
 }

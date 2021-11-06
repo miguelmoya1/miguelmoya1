@@ -13,7 +13,6 @@ type Box = {
     <div
       class="absolute h-full w-full min-h-screen top-0 overflow-hidden"
       [style.z-index]="'-1'"
-      *ngIf="boxes.length !== 0"
     >
       <div
         class="absolute opacity-10 rounded-xl bg-blue-500"

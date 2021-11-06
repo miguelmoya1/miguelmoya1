@@ -1,37 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
-  { path: '', redirectTo: 'about-me', pathMatch: 'full' },
-  {
-    path: 'about-me',
-    loadChildren: () =>
-      import('./pages/about-me/about-me.module').then((m) => m.AboutMeModule),
-  },
-  {
-    path: 'aptitudes',
-    loadChildren: () =>
-      import('./pages/aptitudes/aptitudes.module').then(
-        (m) => m.AptitudesModule
-      ),
-  },
-  {
-    path: 'resume',
-    loadChildren: () =>
-      import('./pages/resume/resume.module').then((m) => m.ResumeModule),
-  },
-  {
-    path: 'contact',
-    loadChildren: () =>
-      import('./pages/contact/contact.module').then((m) => m.ContactModule),
-  },
-  {
-    path: 'projects',
-    loadChildren: () =>
-      import('./pages/projects/projects.module').then((m) => m.ProjectsModule),
-  },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
-];
+const routes: Routes = [{ path: '**', redirectTo: '', pathMatch: 'full' }];
 
 @NgModule({
   imports: [

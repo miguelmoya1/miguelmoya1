@@ -3,7 +3,10 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-title',
   template: `
-    <div class="relative my-4 flex items-center">
+    <div
+      class="relative mb-8 flex items-center"
+      [ngClass]="{ 'mt-16': withMarginTop }"
+    >
       <div class="text-2xl text-center text-blue-500 font-bold">
         {{ title?.charAt(0) }}
       </div>
@@ -15,4 +18,5 @@ import { Component, Input } from '@angular/core';
 })
 export class TitleComponent {
   @Input() title!: string;
+  @Input() withMarginTop = true;
 }

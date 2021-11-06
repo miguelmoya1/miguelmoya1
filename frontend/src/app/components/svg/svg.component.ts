@@ -40,8 +40,8 @@ type SVG = {
     <svg
       [attr.viewBox]="svg.viewBox"
       [attr.type]="svg.type"
-      [style.width]="125"
-      [style.height]="125"
+      [style.width]="size"
+      [style.height]="size"
     >
       <g *ngFor="let item of svg.data">
         <circle
@@ -64,6 +64,7 @@ type SVG = {
 })
 export class SvgComponent implements OnInit {
   @Input() type!: Types;
+  @Input() size = 125;
   svg!: SVG;
   svgs: SVG[] = [
     {
