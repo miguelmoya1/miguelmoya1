@@ -3,19 +3,17 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-about-me',
   template: `
-    <app-page>
-      <app-title [title]="title"></app-title>
+    <app-title [withMarginTop]="false" [title]="title"></app-title>
 
-      <div class="text-gray-200 my-8 text-justify">
-        My name is Miguel Moya Ortega. I'm a Full Stack Developer based in San
-        Vicente del Raspeig, Spain, and I'm very passionate and dedicated to my
-        work. With {{ date }} years experience as a professional Full Stack
-        Developer, I have acquired the skills necessary to build great and
-        premium websites, apps and services.
-      </div>
+    <div class="text-gray-200 mx-4 text-justify mb-8">
+      My name is Miguel Moya Ortega. I'm a Full Stack Developer based in San
+      Vicente del Raspeig, Spain, and I'm very passionate and dedicated to my
+      work. With {{ date }} years experience as a professional Full Stack
+      Developer, I have acquired the skills necessary to build great and premium
+      websites, apps and services.
+    </div>
 
-      <app-table [data]="table"></app-table>
-    </app-page>
+    <app-table [data]="table"></app-table>
   `,
 })
 export class AboutMeComponent implements OnInit {
@@ -26,7 +24,7 @@ export class AboutMeComponent implements OnInit {
   public table = [
     { header: 'age', value: this.calculateAge(new Date(1995, 1, 8)) },
     { header: 'residence', value: 'Spain' },
-    { header: 'address', value: 'San Vicente del raspeig, Spain' },
+    { header: 'address', value: 'San Vicente del raspeig, Alicante' },
   ];
 
   constructor() {}

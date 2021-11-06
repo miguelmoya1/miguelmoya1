@@ -5,7 +5,7 @@ type IData = { header: string; value: string | number; type?: string };
 @Component({
   selector: 'app-table',
   template: `
-    <div class="grid grid-cols-1">
+    <div class="grid grid-cols-1 mx-4">
       <div class="flex items-center gap-2 my-2" *ngFor="let item of data">
         <div class="text-blue-500 uppercase font-bold">{{ item.header }}:</div>
 
