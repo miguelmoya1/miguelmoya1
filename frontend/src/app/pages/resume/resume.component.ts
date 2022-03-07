@@ -5,6 +5,12 @@ import { Component } from '@angular/core';
   template: `
     <ng-container *ngFor="let study of resumes">
       <app-title [title]="study.title"></app-title>
+      <div
+        *ngIf="study.first"
+        class="italic -mt-8 mb-8 text-sm ml-2 text-gray-500"
+      >
+        {{ totalYears }} años en total
+      </div>
 
       <div
         class="flex flex-col relative mb-8 mx-4"
@@ -34,12 +40,17 @@ export class ResumeComponent {
   public title = 'Resume';
   public experience = [
     {
-      title: 'Boon Agency.',
-      subtitle: 'Full Stack Developer',
-      years: '2018 - now',
+      title: 'Gesco 1880',
+      subtitle: 'Frontend Developer',
+      years: '2021 - now',
     },
     {
-      title: 'Conwork | Partner i+d+i tecnológico.',
+      title: 'Boon Agency',
+      subtitle: 'Full Stack Developer',
+      years: '2018 - 2021',
+    },
+    {
+      title: 'Conwork | Partner i+d+i tecnológico',
       subtitle: 'Full Stack Developer',
       years: '2017 - 2018',
     },
@@ -60,4 +71,6 @@ export class ResumeComponent {
     { title: 'Experience', data: this.experience, first: true },
     { title: 'Studies', data: this.education },
   ];
+
+  public totalYears = new Date().getFullYear() - 2017;
 }

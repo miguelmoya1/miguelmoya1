@@ -16,6 +16,7 @@ import { Component } from '@angular/core';
             <app-projects></app-projects>
             <app-resume></app-resume>
             <app-aptitudes></app-aptitudes>
+            <app-contact></app-contact>
           </app-page>
         </div>
       </main>
