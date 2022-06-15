@@ -30,8 +30,6 @@ type Aptitude = {
   `,
 })
 export class AptitudesComponent {
-  public title = 'Aptitudes';
-
   public aptitudes: { title: string; data: Aptitude[] }[] = [
     {
       title: 'Frameworks',
