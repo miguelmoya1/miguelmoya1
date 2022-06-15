@@ -1,7 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TitleComponent } from '../components/title/title.component';
 
 @Component({
   selector: 'app-resume',
+  standalone: true,
+  imports: [CommonModule, TitleComponent],
   template: `
     <ng-container *ngFor="let study of resumes">
       <app-title [title]="study.title"></app-title>
@@ -27,7 +31,7 @@ import { Component } from '@angular/core';
         <div
           class="absolute right-0 top-0 text-xs text-gray-600 border-gray-600 p-1 border rounded"
           [ngClass]="{
-            'text-blue-500 border-blue-500': i === 0 && study.first
+            '!text-blue-500 border-blue-500': i === 0 && study.first
           }"
         >
           {{ experience.years }}

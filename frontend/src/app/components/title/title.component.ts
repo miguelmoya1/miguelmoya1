@@ -1,7 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-title',
+  standalone: true,
+  imports: [CommonModule],
   template: `
     <div
       class="relative mb-8 flex items-center"

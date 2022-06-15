@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 type Box = {
@@ -9,6 +10,8 @@ type Box = {
 
 @Component({
   selector: 'app-background',
+  standalone: true,
+  imports: [CommonModule],
   template: `
     <div
       class="absolute h-full w-full min-h-screen top-0 overflow-hidden"

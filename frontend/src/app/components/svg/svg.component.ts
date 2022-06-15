@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 
 export type Types =
@@ -36,6 +37,8 @@ type SVG = {
 
 @Component({
   selector: 'app-svg',
+  standalone: true,
+  imports: [CommonModule],
   template: `
     <svg
       [attr.viewBox]="svg.viewBox"

@@ -1,7 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TitleComponent } from '../components/title/title.component';
 
 @Component({
   selector: 'app-projects',
+  standalone: true,
+  imports: [TitleComponent, CommonModule],
   template: `
     <app-title [title]="'Projects'"></app-title>
     <a

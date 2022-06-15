@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { TableComponent } from '../components/table/table.component';
+import { TitleComponent } from '../components/title/title.component';
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
+  imports: [TitleComponent, TableComponent],
   template: `
     <app-title [title]="'Get in Touch'"></app-title>
 

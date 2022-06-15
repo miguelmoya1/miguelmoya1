@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { TableComponent } from '../components/table/table.component';
+import { TitleComponent } from '../components/title/title.component';
 
 @Component({
   selector: 'app-about-me',
+  standalone: true,
+  imports: [TitleComponent, TableComponent],
   template: `
     <app-title [withMarginTop]="false" [title]="title"></app-title>
 
@@ -24,7 +28,7 @@ export class AboutMeComponent implements OnInit {
   public table = [
     { header: 'age', value: this.calculateAge(new Date(1995, 1, 8)) },
     { header: 'residence', value: 'Spain' },
-    { header: 'address', value: 'San Vicente del raspeig, Alicante' },
+    { header: 'address', value: 'San Vicente del Raspeig, Alicante' },
   ];
 
   constructor() {}

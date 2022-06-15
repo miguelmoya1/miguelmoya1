@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Types } from '../../components/svg/svg.component';
+import { SvgComponent, Types } from '../components/svg/svg.component';
+import { TitleComponent } from '../components/title/title.component';
 
 type Aptitude = {
   title: string;
@@ -8,6 +9,8 @@ type Aptitude = {
 
 @Component({
   selector: 'app-aptitudes',
+  standalone: true,
+  imports: [TitleComponent, SvgComponent],
   template: `
     <ng-container *ngFor="let aptitude of aptitudes">
       <app-title [title]="aptitude.title"></app-title>
@@ -40,19 +43,5 @@ export class AptitudesComponent {
         { title: 'Nextjs', value: 'next' },
       ],
     },
-    // {
-    //   title: 'Programming Languages',
-    //   data: [
-    //     { title: 'Typescript', value: 'typescript' },
-    //     { title: 'Javascript', value: 'javascript' },
-    //   ],
-    // },
-    // {
-    //   title: 'Languages',
-    //   data: [
-    //     { title: 'English', value: 'english' },
-    //     { title: 'Spanish', value: 'spanish' },
-    //   ],
-    // },
   ];
 }
