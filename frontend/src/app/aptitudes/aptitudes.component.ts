@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SvgComponent, Types } from '../components/svg/svg.component';
 import { TitleComponent } from '../components/title/title.component';
@@ -10,7 +11,7 @@ type Aptitude = {
 @Component({
   selector: 'app-aptitudes',
   standalone: true,
-  imports: [TitleComponent, SvgComponent],
+  imports: [TitleComponent, SvgComponent, CommonModule],
   template: `
     <ng-container *ngFor="let aptitude of aptitudes">
       <app-title [title]="aptitude.title"></app-title>
