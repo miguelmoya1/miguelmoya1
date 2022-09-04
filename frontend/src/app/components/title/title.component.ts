@@ -10,7 +10,7 @@ import { Component, Input } from '@angular/core';
       class="relative mb-8 flex items-center"
       [ngClass]="{ 'mt-16': withMarginTop }"
     >
-      <div class="text-2xl text-center text-blue-500 font-bold">
+      <div class="text-2xl text-center text-primary font-bold">
         {{ title?.charAt(0) }}
       </div>
       <div class="text-gray-200 text-2xl font-bold">

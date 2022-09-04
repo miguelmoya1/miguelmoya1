@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Colors, ColorService } from '../colors/color.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,9 +9,22 @@ import { Component } from '@angular/core';
       class="rounded-xl bg-gray-800 sm:h-170 sm:w-120 my-4 xl:my-0 xl:mt-0 mx-auto w-11/12 xl:mr-0 flex flex-col justify-between"
     >
       <div
-        class="w-full rounded-t-xl bg-no-repeat h-96"
+        class="w-full rounded-t-xl bg-no-repeat h-96 flex items-end justify-center gap-4"
         [style.background-image]="'url(../../../assets/header.webp)'"
-      ></div>
+      >
+        <div
+          class="w-8 h-8 rounded-full bg-red-500 cursor-pointer"
+          (click)="changeColor('red')"
+        ></div>
+        <div
+          class="w-8 h-8 rounded-full bg-green-500 cursor-pointer"
+          (click)="changeColor('green')"
+        ></div>
+        <div
+          class="w-8 h-8 rounded-full bg-blue-500 cursor-pointer"
+          (click)="changeColor('blue')"
+        ></div>
+      </div>
 
       <div class="mx-4">
         <div class="flex flex-col items-center m-4">
@@ -29,7 +43,7 @@ import { Component } from '@angular/core';
             class="flex items-center justify-center"
           >
             <svg
-              class="h-8 w-8 fill-current text-gray-200 hover:text-blue-500 transition"
+              class="h-8 w-8 fill-current text-gray-200 hover:text-primary transition"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 25"
             >
@@ -44,7 +58,7 @@ import { Component } from '@angular/core';
             rel="noopener noreferrer"
           >
             <svg
-              class="h-8 w-8 fill-current text-gray-200 hover:text-blue-500 transition"
+              class="h-8 w-8 fill-current text-gray-200 hover:text-primary transition"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 25 25"
             >
@@ -59,7 +73,7 @@ import { Component } from '@angular/core';
             rel="noopener noreferrer"
           >
             <svg
-              class="h-8 w-8 fill-current text-gray-200 hover:text-blue-500 transition"
+              class="h-8 w-8 fill-current text-gray-200 hover:text-primary transition"
               xmlns="http://www.w3.org/2000/svg"
               version="1.1"
               viewBox="0 0 90 90"
@@ -77,4 +91,10 @@ import { Component } from '@angular/core';
     </div>
   `,
 })
-export class ProfileComponent {}
+export class ProfileComponent {
+  constructor(private colorService: ColorService) {}
+
+  changeColor(color: Colors) {
+    this.colorService.setColor(color);
+  }
+}

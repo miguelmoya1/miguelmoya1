@@ -4,7 +4,7 @@ import { AptitudesComponent } from './aptitudes/aptitudes.component';
 import { ClassroomComponent } from './classroom/classroom.component';
 import { BackgroundComponent } from './components/background/background.component';
 import { PageComponent } from './components/page/page.component';
-import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileComponent } from './profile/profile.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ResumeComponent } from './resume/resume.component';

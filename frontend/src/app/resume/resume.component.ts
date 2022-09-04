@@ -21,7 +21,7 @@ import { TitleComponent } from '../components/title/title.component';
         *ngFor="let experience of study.data; let i = index"
       >
         <div
-          class="w-8/12 text-blue-500 font-bold text-lg overflow-ellipsis overflow-hidden whitespace-nowrap"
+          class="w-8/12 text-primary font-bold text-lg overflow-ellipsis overflow-hidden whitespace-nowrap"
         >
           {{ experience.title }}
         </div>
@@ -31,7 +31,7 @@ import { TitleComponent } from '../components/title/title.component';
         <div
           class="absolute right-0 top-0 text-xs text-gray-600 border-gray-600 p-1 border rounded"
           [ngClass]="{
-            '!text-blue-500 border-blue-500': i === 0 && study.first
+            '!text-primary border-primary': i === 0 && study.first
           }"
         >
           {{ experience.years }}

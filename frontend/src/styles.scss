@@ -17,3 +17,113 @@ div {
     border-radius: 6px;
   }
 }
+
+body.red {
+  .text-primary {
+    @apply text-red-500;
+  }
+
+  .bg-primary {
+    @apply bg-red-500;
+  }
+
+  .hover\:text-primary:hover {
+    @apply hover:text-red-500;
+  }
+
+  .hover\:bg-primary:hover {
+    @apply hover:bg-red-500;
+  }
+
+  .\!text-primary {
+    @apply text-red-500;
+  }
+
+  .border-primary {
+    @apply border-red-500;
+  }
+}
+
+body.blue {
+  .text-primary {
+    @apply text-blue-500;
+  }
+
+  .bg-primary {
+    @apply bg-blue-500;
+  }
+
+  .hover\:text-primary:hover {
+    @apply hover:text-blue-500;
+  }
+
+  .hover\:bg-primary:hover {
+    @apply hover:bg-blue-500;
+  }
+
+  .\!text-primary {
+    @apply text-blue-500;
+  }
+
+  .border-primary {
+    @apply border-blue-500;
+  }
+}
+
+body.green {
+  .text-primary {
+    @apply text-green-500;
+  }
+
+  .bg-primary {
+    @apply bg-green-500;
+  }
+
+  .hover\:text-primary:hover {
+    @apply hover:text-green-500;
+  }
+
+  .hover\:bg-primary:hover {
+    @apply hover:bg-green-500;
+  }
+
+  .\!text-primary {
+    @apply text-green-500;
+  }
+
+  .border-primary {
+    @apply border-green-500;
+  }
+}
+
+body {
+  .text-primary {
+    @apply text-blue-500;
+    @apply transition duration-500 ease-in-out;
+  }
+
+  .bg-primary {
+    @apply bg-blue-500;
+    @apply transition duration-500 ease-in-out;
+  }
+
+  .hover\:text-primary:hover {
+    @apply hover:text-blue-500;
+    @apply transition duration-500 ease-in-out;
+  }
+
+  .hover\:bg-primary:hover {
+    @apply hover:bg-blue-500;
+    @apply transition duration-500 ease-in-out;
+  }
+
+  .\!text-primary {
+    @apply text-blue-500;
+    @apply transition duration-500 ease-in-out;
+  }
+
+  .border-primary {
+    @apply border-blue-500;
+    @apply transition duration-500 ease-in-out;
+  }
+}

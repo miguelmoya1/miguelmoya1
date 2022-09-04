@@ -17,7 +17,7 @@ type Aptitude = {
       <app-title [title]="aptitude.title"></app-title>
       <div class="grid xl:grid-cols-2 justify-items-center">
         <div
-          class="mt-4 text-transparent hover:text-blue-500 grid"
+          class="mt-4 text-transparent hover:text-primary grid"
           *ngFor="let data of aptitude.data"
         >
           <app-svg [type]="data.value"></app-svg>

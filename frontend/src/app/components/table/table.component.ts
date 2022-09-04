@@ -10,7 +10,7 @@ type IData = { header: string; value: string | number; type?: string };
   template: `
     <div class="grid grid-cols-1 mx-4">
       <div class="flex items-center gap-2 my-2" *ngFor="let item of data">
-        <div class="text-blue-500 uppercase font-bold">{{ item.header }}:</div>
+        <div class="text-primary uppercase font-bold">{{ item.header }}:</div>
 
         <div class="italic text-sm text-gray-400">
           <a

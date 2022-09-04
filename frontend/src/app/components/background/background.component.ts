@@ -18,7 +18,7 @@ type Box = {
       [style.z-index]="'-1'"
     >
       <div
-        class="absolute opacity-10 rounded-xl bg-blue-500"
+        class="absolute opacity-10 rounded-xl bg-primary"
         [ngStyle]="{
           left: box.left,
           width: box.size,
