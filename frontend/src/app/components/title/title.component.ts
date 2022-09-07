@@ -11,15 +11,15 @@ import { Component, Input } from '@angular/core';
       [ngClass]="{ 'mt-16': withMarginTop }"
     >
       <div class="text-2xl text-center text-primary font-bold">
-        {{ title?.charAt(0) }}
+        {{ title.charAt(0) }}
       </div>
       <div class="text-gray-200 text-2xl font-bold">
-        {{ title?.slice(1) }}
+        {{ title.slice(1) }}
       </div>
     </div>
   `,
 })
 export class TitleComponent {
-  @Input() title!: string;
+  @Input() title = '';
   @Input() withMarginTop = true;
 }

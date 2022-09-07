@@ -1,13 +1,7 @@
 module.exports = {
   prefix: '',
-  mode: 'jist',
-  purge: {
-    enabled: true,
-    content: [
-      './src/**/*.{html,ts}',
-    ]
-  },
-  darkMode: 'class', // or 'media' or 'class'
+  mode: 'jit',
+  content: ['./src/**/*.{html,ts}'],
   theme: {
     extend: {
       height: {
@@ -33,9 +27,6 @@ module.exports = {
         180: '45rem',
       }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };
