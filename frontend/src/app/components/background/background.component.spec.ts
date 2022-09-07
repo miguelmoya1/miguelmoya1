@@ -8,9 +8,8 @@ describe('BackgroundComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BackgroundComponent ]
-    })
-    .compileComponents();
+      imports: [BackgroundComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -8,9 +8,8 @@ describe('SvgComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SvgComponent ]
-    })
-    .compileComponents();
+      imports: [SvgComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
