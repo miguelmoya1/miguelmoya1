@@ -36,15 +36,27 @@ import { TitleComponent } from '../components/title/title.component';
 export class ProjectsComponent {
   projects = [
     {
-      name: 'Perseo - Games',
-      link: 'https://perseo.games',
-      image: './assets/pg.png',
-    },
-    {
       name: 'sequelize-do-migrations',
       link: 'https://www.npmjs.com/package/sequelize-do-migrations',
       image: './assets/npm.svg',
       mini: true,
+    },
+    {
+      name: 'Outfits',
+      link: 'https://outfit.support',
+      image: './assets/outfit.png',
+      mini: true,
+    },
+    {
+      name: 'Classroom',
+      link: 'https://classroom.miguelmo.dev',
+      image: './assets/favicon.ico',
+      mini: true,
+    },
+    {
+      name: 'Perseo - Games',
+      link: 'https://perseo.games',
+      image: './assets/pg.png',
     },
   ];
 }
