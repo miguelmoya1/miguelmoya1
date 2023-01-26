@@ -29,18 +29,18 @@ import { ResumeComponent } from './resume/resume.component';
         class="flex flex-col items-stretch justify-center z-10 xl:w-min xl:gap-4 xl:flex-row xl:items-center xl:mx-4"
       >
         <div class="xl:flex xl:items-center gap-4">
-          <app-profile></app-profile>
+          <app-profile />
           <app-page>
-            <app-about-me></app-about-me>
-            <app-projects></app-projects>
-            <app-resume></app-resume>
-            <app-aptitudes></app-aptitudes>
-            <app-contact></app-contact>
+            <app-about-me />
+            <app-resume />
+            <app-aptitudes />
+            <app-projects />
+            <app-contact />
           </app-page>
         </div>
       </main>
     </div>
-    <app-background></app-background>
+    <app-background />
   `,
 })
 export class AppComponent {}

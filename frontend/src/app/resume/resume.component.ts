@@ -8,7 +8,7 @@ import { TitleComponent } from '../components/title/title.component';
   imports: [CommonModule, TitleComponent],
   template: `
     <ng-container *ngFor="let study of resumes">
-      <app-title [title]="study.title"></app-title>
+      <app-title [title]="study.title" />
       <div
         *ngIf="study.first"
         class="italic -mt-8 mb-8 text-sm ml-2 text-gray-500"

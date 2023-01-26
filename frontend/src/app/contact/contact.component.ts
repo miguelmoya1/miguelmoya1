@@ -7,7 +7,7 @@ import { TitleComponent } from '../components/title/title.component';
   standalone: true,
   imports: [TitleComponent, TableComponent],
   template: `
-    <app-title [title]="'Get in Touch'"></app-title>
+    <app-title [title]="'Get in Touch'" />
 
     <iframe
       class="w-full h-64 rounded-xl"
@@ -17,7 +17,7 @@ import { TitleComponent } from '../components/title/title.component';
       loading="lazy"
     ></iframe>
 
-    <app-table [data]="info"></app-table>
+    <app-table [data]="info" />
   `,
 })
 export class ContactComponent implements OnInit {

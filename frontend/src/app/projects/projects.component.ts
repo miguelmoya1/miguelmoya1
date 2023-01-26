@@ -7,7 +7,7 @@ import { TitleComponent } from '../components/title/title.component';
   standalone: true,
   imports: [TitleComponent, CommonModule],
   template: `
-    <app-title [title]="'Projects'"></app-title>
+    <app-title [withMarginTop]="false" [title]="'Projects'" />
     <a
       class="rounded hover:bg-gray-600 bg-opacity-50 mb-4 h-16 flex items-center justify-center"
       target="_blank"

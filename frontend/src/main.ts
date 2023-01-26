@@ -1,17 +1,8 @@
-import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app/app.component';
-import { environment } from './environments/environment';
-
-if (environment.production) {
-  enableProdMode();
-}
+import APP_ROUTES from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
-  providers: [
-    importProvidersFrom(
-      RouterModule.forRoot([{ path: '**', redirectTo: '', pathMatch: 'full' }])
-    ),
-  ],
+  providers: [provideRouter(APP_ROUTES)],
 });

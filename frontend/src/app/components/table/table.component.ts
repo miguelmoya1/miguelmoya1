@@ -26,7 +26,5 @@ type IData = { header: string; value: string | number; type?: string };
   `,
 })
 export class TableComponent {
-  @Input() data!: IData[];
-
-  constructor() {}
+  @Input() public data!: IData[];
 }

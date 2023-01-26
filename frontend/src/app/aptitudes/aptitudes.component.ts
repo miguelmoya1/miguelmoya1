@@ -14,13 +14,13 @@ type Aptitude = {
   imports: [TitleComponent, SvgComponent, CommonModule],
   template: `
     <ng-container *ngFor="let aptitude of aptitudes">
-      <app-title [title]="aptitude.title"></app-title>
+      <app-title [title]="aptitude.title" />
       <div class="grid xl:grid-cols-2 justify-items-center">
         <div
           class="mt-4 text-transparent hover:text-primary grid"
           *ngFor="let data of aptitude.data"
         >
-          <app-svg [type]="data.value"></app-svg>
+          <app-svg [type]="data.value" />
           <h2 class="duration-500 font-bold text-xl mt-4 mb-8 text-center">
             {{ data.title }}
           </h2>

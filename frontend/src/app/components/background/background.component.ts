@@ -34,27 +34,6 @@ type Box = {
       ></div>
     </div>
   `,
-  styles: [
-    `
-      @keyframes goTop {
-        0% {
-          bottom: -30%;
-        }
-        100% {
-          bottom: 120%;
-        }
-      }
-
-      @keyframes rotating {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    `,
-  ],
 })
 export class BackgroundComponent implements OnInit {
   public boxes: Box[] = new Array(20).fill({});

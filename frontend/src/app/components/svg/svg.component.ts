@@ -54,13 +54,13 @@ type SVG = {
           [attr.r]="item.r"
           [attr.style]="item.style"
           [attr.fill]="item.fill"
-        ></circle>
+        />
         <path
           *ngIf="item.type === 'path'"
           [attr.d]="item.d"
           [attr.style]="item.style"
           [attr.fill]="item.fill"
-        ></path>
+        />
       </g>
     </svg>
   `,

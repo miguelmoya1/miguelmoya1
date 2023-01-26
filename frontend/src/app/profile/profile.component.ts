@@ -39,7 +39,6 @@ import { Colors, ColorService } from '../colors/color.service';
           <a
             href="https://github.com/miguelmoya1"
             target="_blank"
-            rel="noopener noreferrer"
             class="flex items-center justify-center"
           >
             <svg
@@ -52,11 +51,7 @@ import { Colors, ColorService } from '../colors/color.service';
               />
             </svg>
           </a>
-          <a
-            href="https://www.linkedin.com/in/miguelmo/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.linkedin.com/in/miguelmo/" target="_blank">
             <svg
               class="h-8 w-8 fill-current text-gray-200 hover:text-primary transition"
               xmlns="http://www.w3.org/2000/svg"
@@ -67,11 +62,7 @@ import { Colors, ColorService } from '../colors/color.service';
               />
             </svg>
           </a>
-          <a
-            href="mailto:miguelmoyaortega@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="mailto:miguelmoyaortega@gmail.com" target="_blank">
             <svg
               class="h-8 w-8 fill-current text-gray-200 hover:text-primary transition"
               xmlns="http://www.w3.org/2000/svg"
