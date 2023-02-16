@@ -154,6 +154,10 @@ section {
   min-height: 100vh;
 }
 
+section:not(:last-child) {
+  margin-bottom: 0;
+}
+
 .animation-hidden {
   opacity: 0;
   filter: blur(10px);
