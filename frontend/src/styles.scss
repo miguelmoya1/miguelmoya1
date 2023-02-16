@@ -3,22 +3,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-div {
-  &::-webkit-scrollbar {
-    width: 6px;
-    background-color: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.25);
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.25);
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-  }
-}
-
 body.red {
   .text-primary {
     @apply text-red-500;
@@ -127,6 +111,21 @@ body {
     @apply border-blue-500;
     @apply transition duration-500 ease-in-out;
   }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
 }
 
 @keyframes goTop {
@@ -144,5 +143,32 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  margin-bottom: 20vh;
+  min-height: 100vh;
+}
+
+.animation-hidden {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.animation-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .animation-hidden {
+    transition: none;
   }
 }

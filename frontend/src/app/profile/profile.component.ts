@@ -5,23 +5,18 @@ import { Colors, ColorService } from '../colors/color.service';
   selector: 'app-profile',
   standalone: true,
   template: `
-    <div
-      class="rounded-xl bg-gray-800 sm:h-170 sm:w-120 my-4 xl:my-0 xl:mt-0 mx-auto w-11/12 xl:mr-0 flex flex-col justify-between"
-    >
-      <div
-        class="w-full rounded-t-xl bg-no-repeat h-96 flex items-end justify-center gap-4"
-        [style.background-image]="'url(../../../assets/header.webp)'"
-      >
+    <div class="flex flex-col justify-between items-center">
+      <div class="flex items-end justify-center gap-4">
         <div
-          class="w-8 h-8 rounded-full bg-red-500 cursor-pointer"
+          class="w-8 h-8 rounded-full bg-red-500 cursor-pointer animate-bounce"
           (click)="changeColor('red')"
         ></div>
         <div
-          class="w-8 h-8 rounded-full bg-green-500 cursor-pointer"
+          class="w-8 h-8 rounded-full bg-green-500 cursor-pointer animate-bounce"
           (click)="changeColor('green')"
         ></div>
         <div
-          class="w-8 h-8 rounded-full bg-blue-500 cursor-pointer"
+          class="w-8 h-8 rounded-full bg-blue-500 cursor-pointer animate-bounce"
           (click)="changeColor('blue')"
         ></div>
       </div>

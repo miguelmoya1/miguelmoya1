@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { AptitudesComponent } from './aptitudes/aptitudes.component';
 import { BackgroundComponent } from './components/background/background.component';
@@ -22,25 +22,54 @@ import { ResumeComponent } from './resume/resume.component';
     ContactComponent,
   ],
   template: `
-    <div
-      class="h-full min-h-screen w-full xl:flex xl:justify-center xl:items-center"
-    >
-      <main
-        class="flex flex-col items-stretch justify-center z-10 xl:w-min xl:gap-4 xl:flex-row xl:items-center xl:mx-4"
-      >
-        <div class="xl:flex xl:items-center gap-4">
-          <app-profile />
-          <app-page>
-            <app-about-me />
-            <app-resume />
-            <app-aptitudes />
-            <app-projects />
-            <app-contact />
-          </app-page>
-        </div>
-      </main>
-    </div>
+    <section class="animation-hidden">
+      <div class="container flex items-center justify-center p-4">
+        <app-profile class="w-full" />
+      </div>
+    </section>
+    <section class="animation-hidden">
+      <div class="container flex items-center justify-center p-4">
+        <app-about-me class="w-full" />
+      </div>
+    </section>
+    <section class="animation-hidden">
+      <div class="container flex items-center justify-center p-4">
+        <app-resume class="w-full" />
+      </div>
+    </section>
+    <section class="animation-hidden">
+      <div class="container flex items-center justify-center p-4">
+        <app-aptitudes class="w-full" />
+      </div>
+    </section>
+    <section class="animation-hidden">
+      <div class="container flex items-center justify-center p-4">
+        <app-projects class="w-full" />
+      </div>
+    </section>
+    <section class="animation-hidden">
+      <div class="container flex items-center justify-center p-4">
+        <app-contact class="w-full" />
+      </div>
+    </section>
     <app-background />
   `,
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  ngOnInit() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animation-visible');
+        } else {
+          entry.target.classList.remove('animation-visible');
+        }
+      });
+    });
+
+    const elements = document.querySelectorAll('.animation-hidden');
+
+    elements.forEach((element) => observer.observe(element));
+  }
+}
