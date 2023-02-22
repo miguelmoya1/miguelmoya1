@@ -22,36 +22,38 @@ import { ResumeComponent } from './resume/resume.component';
     ContactComponent,
   ],
   template: `
-    <section class="animation-hidden">
-      <div class="container flex items-center justify-center p-4">
-        <app-profile class="w-full" />
-      </div>
-    </section>
-    <section class="animation-hidden">
-      <div class="container flex items-center justify-center p-4">
-        <app-about-me class="w-full" />
-      </div>
-    </section>
-    <section class="animation-hidden">
-      <div class="container flex items-center justify-center p-4">
-        <app-resume class="w-full" />
-      </div>
-    </section>
-    <section class="animation-hidden">
-      <div class="container flex items-center justify-center p-4">
-        <app-aptitudes class="w-full" />
-      </div>
-    </section>
-    <section class="animation-hidden">
-      <div class="container flex items-center justify-center p-4">
-        <app-projects class="w-full" />
-      </div>
-    </section>
-    <section class="animation-hidden">
-      <div class="container flex items-center justify-center p-4">
-        <app-contact class="w-full" />
-      </div>
-    </section>
+    <main class="snap-y snap-proximity">
+      <section class="animation-hidden snap-center">
+        <div class="container flex items-center justify-center p-4">
+          <app-profile class="w-full" />
+        </div>
+      </section>
+      <section class="animation-hidden snap-center">
+        <div class="container flex items-center justify-center p-4">
+          <app-about-me class="w-full" />
+        </div>
+      </section>
+      <section class="animation-hidden snap-center">
+        <div class="container flex items-center justify-center p-4">
+          <app-resume class="w-full" />
+        </div>
+      </section>
+      <section class="animation-hidden snap-center">
+        <div class="container flex items-center justify-center p-4">
+          <app-aptitudes class="w-full" />
+        </div>
+      </section>
+      <section class="animation-hidden snap-center">
+        <div class="container flex items-center justify-center p-4">
+          <app-projects class="w-full" />
+        </div>
+      </section>
+      <section class="animation-hidden snap-center">
+        <div class="container flex items-center justify-center p-4">
+          <app-contact class="w-full" />
+        </div>
+      </section>
+    </main>
     <app-background />
   `,
 })
@@ -59,7 +61,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting) {
           entry.target.classList.add('animation-visible');
         } else {
