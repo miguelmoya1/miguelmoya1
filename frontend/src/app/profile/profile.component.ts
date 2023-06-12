@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Colors, ColorService } from '../colors/color.service';
+import { Component, inject } from '@angular/core';
+import { ColorService, Colors } from '../colors/color.service';
 
 @Component({
   selector: 'app-profile',
@@ -78,7 +78,7 @@ import { Colors, ColorService } from '../colors/color.service';
   `,
 })
 export class ProfileComponent {
-  constructor(private colorService: ColorService) {}
+  private readonly colorService = inject(ColorService);
 
   changeColor(color: Colors) {
     this.colorService.setColor(color);

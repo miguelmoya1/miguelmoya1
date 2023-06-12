@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { TableComponent } from '../components/table/table.component';
 import { TitleComponent } from '../components/title/title.component';
 
@@ -17,16 +17,14 @@ import { TitleComponent } from '../components/title/title.component';
       loading="lazy"
     ></iframe>
 
-    <app-table [data]="info" />
+    <app-table [data]="info()" />
   `,
 })
-export class ContactComponent implements OnInit {
-  public info = [
+export class ContactComponent {
+  public readonly title = signal('Contact');
+  
+  protected readonly info = signal([
     { header: 'Address', value: 'San Vicente del Raspeig' },
     { header: 'Email', value: 'miguelmoyaortega@gmail.com', type: 'mailto:' },
-    // { header: 'Phone', value: '+34 646 74 95 70', type: 'tel:' },
-  ];
-  constructor() {}
-
-  ngOnInit() {}
+  ]);
 }
