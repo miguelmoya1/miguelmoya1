@@ -1,4 +1,8 @@
-### Hi there 👋
+I am a software engineer with a passion for building and innovating. I have experience in a variety of programming languages and technologies, including Angular, NestJS, React, React Native, and Next.js. I am also proficient in using Git and GitHub.
+
+I am a team player and I am always willing to help others. I am also a quick learner and I am always looking for new challenges.
+
+I am looking for a position where I can use my skills and experience to make a positive impact on the world. I am also looking for a company that values innovation and collaboration.
 
 <!--
 **miguelmoya1/miguelmoya1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

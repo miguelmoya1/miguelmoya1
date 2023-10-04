@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { TitleComponent } from '../components/title/title.component';
 
 @Component({
@@ -7,13 +7,13 @@ import { TitleComponent } from '../components/title/title.component';
   standalone: true,
   imports: [CommonModule, TitleComponent],
   template: `
-    <ng-container *ngFor="let study of resumes">
+    <ng-container *ngFor="let study of resumes()">
       <app-title [title]="study.title" />
       <div
-        *ngIf="study.first"
+        *ngIf="study.totalYears"
         class="italic -mt-8 mb-8 text-sm ml-2 text-gray-500"
       >
-        {{ totalYears }} años en total
+        {{ study.totalYears }} years of experience
       </div>
 
       <div
@@ -41,12 +41,18 @@ import { TitleComponent } from '../components/title/title.component';
   `,
 })
 export class ResumeComponent {
-  public title = 'Resume';
-  public experience = [
+  public readonly title = signal('Resume');
+  
+  protected readonly experience = signal([
+    {
+      title: 'Nax Solutions',
+      subtitle: 'Frontend Lead Developer',
+      years: '2023 - now',
+    },
     {
       title: 'Gesco 1880',
       subtitle: 'Frontend Developer',
-      years: '2021 - now',
+      years: '2021 - 2023',
     },
     {
       title: 'Boon Agency',
@@ -58,8 +64,9 @@ export class ResumeComponent {
       subtitle: 'Full Stack Developer',
       years: '2017 - 2018',
     },
-  ];
-  public education = [
+  ]);
+
+  protected readonly education = signal([
     {
       title: 'IES San Vicente del Raspeig.',
       subtitle: 'Técnico Superior en Desarrollo de Aplicaciones Web',
@@ -70,11 +77,14 @@ export class ResumeComponent {
       subtitle: 'Técnico en Sistemas Microinformáticos y Redes',
       years: '2012 - 2015',
     },
-  ];
-  public resumes = [
-    { title: 'Experience', data: this.experience, first: true },
-    { title: 'Studies', data: this.education },
-  ];
+  ]);
 
-  public totalYears = new Date().getFullYear() - 2017;
+  protected readonly totalYears = signal(new Date().getFullYear() - 2017);
+
+
+  protected readonly resumes = computed(() => [
+    { title: 'Experience', data: this.experience(), first: true, totalYears: this.totalYears() },
+    { title: 'Studies', data: this.education() },
+  ]);
+
 }

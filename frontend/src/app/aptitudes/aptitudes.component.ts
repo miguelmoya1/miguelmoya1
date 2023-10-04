@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { SvgComponent, Types } from '../components/svg/svg.component';
 import { TitleComponent } from '../components/title/title.component';
 
@@ -13,12 +13,11 @@ type Aptitude = {
   standalone: true,
   imports: [TitleComponent, SvgComponent, CommonModule],
   template: `
-    <ng-container *ngFor="let aptitude of aptitudes">
-      <app-title [title]="aptitude.title" />
+      <app-title [title]="aptitudes().title" />
       <div class="grid xl:grid-cols-2 justify-items-center">
         <div
           class="mt-4 text-transparent hover:text-primary grid"
-          *ngFor="let data of aptitude.data"
+          *ngFor="let data of aptitudes().data"
         >
           <app-svg [type]="data.value" />
           <h2 class="duration-500 font-bold text-xl mt-4 mb-8 text-center">
@@ -26,21 +25,22 @@ type Aptitude = {
           </h2>
         </div>
       </div>
-    </ng-container>
   `,
 })
 export class AptitudesComponent {
-  public aptitudes: { title: string; data: Aptitude[] }[] = [
+  public readonly title = signal('Aptitudes');
+
+  protected readonly aptitudes = signal<{title: string, data: {title: string, value: Types }[]}>(
     {
       title: 'Frameworks',
       data: [
-        { title: 'Angular', value: 'angular' },
-        { title: 'Nestjs', value: 'nest' },
-        { title: 'Ionic', value: 'ionic' },
-        { title: 'Node', value: 'node' },
-        { title: 'React', value: 'react' },
-        { title: 'Nextjs', value: 'next' },
+        { title: 'Angular', value: 'angular' as Types },
+        { title: 'Nestjs', value: 'nest' as Types  },
+        { title: 'Ionic', value: 'ionic' as Types  },
+        { title: 'Node', value: 'node' as Types  },
+        { title: 'React', value: 'react' as Types  },
+        { title: 'Nextjs', value: 'next' as Types  },
       ],
     },
-  ];
+  );
 }

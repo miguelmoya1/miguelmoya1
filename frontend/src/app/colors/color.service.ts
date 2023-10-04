@@ -15,7 +15,7 @@ export class ColorService {
   }
 
   setColor(color: Colors) {
-    document.body.className = `relative bg-gray-900 ${color}`;
+    document.body.className = `relative bg-neutral-900 ${color}`;
 
     localStorage.setItem('color', color);
   }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { TitleComponent } from '../components/title/title.component';
 
 @Component({
@@ -12,7 +12,7 @@ import { TitleComponent } from '../components/title/title.component';
       class="rounded hover:bg-gray-600 bg-opacity-50 mb-4 h-16 flex items-center justify-center"
       target="_blank"
       [href]="project.link"
-      *ngFor="let project of projects"
+      *ngFor="let project of projects()"
     >
       <div class="w-full flex items-center text-white">
         <div class="w-2/12 flex items-center justify-center">
@@ -34,7 +34,14 @@ import { TitleComponent } from '../components/title/title.component';
   `,
 })
 export class ProjectsComponent {
-  projects = [
+  public readonly title = signal('Projects');
+  
+  protected readonly projects = signal([
+    {
+      name: 'Playrol.app',
+      link: 'https://playrol.app',
+      
+    },
     {
       name: 'sequelize-do-migrations',
       link: 'https://www.npmjs.com/package/sequelize-do-migrations',
@@ -58,5 +65,5 @@ export class ProjectsComponent {
       link: 'https://perseo.games',
       image: './assets/pg.png',
     },
-  ];
+  ]);
 }
