@@ -1,0 +1,42 @@
+.button {
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgba(var(--color-rgba));
+  color: rgba(var(--color-rgba));
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(var(--shadow-color-rgba)),
+    0 0 1rem rgba(var(--shadow-color-rgba)),
+    0 0 2rem rgba(var(--shadow-color-rgba));
+  animation: glow 1s ease-in-out infinite;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+
+  margin: 1rem;
+
+  &.active {
+    animation: none;
+    box-shadow: 0 0 0.2rem rgba(var(--shadow-color-rgba)),
+      0 0 0.5rem rgba(var(--shadow-color-rgba)),
+      0 0 1rem rgba(var(--shadow-color-rgba));
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0.5rem rgba(var(--shadow-color-rgba)),
+      0 0 1rem rgba(var(--shadow-color-rgba)),
+      0 0 2rem rgba(var(--shadow-color-rgba));
+  }
+  50% {
+    box-shadow: 0 0 1.3rem rgba(var(--shadow-color-rgba)),
+      0 0 1.2rem rgba(var(--shadow-color-rgba)),
+      0 0 2rem rgba(var(--shadow-color-rgba));
+  }
+  100% {
+    box-shadow: 0 0 0.5rem rgba(var(--shadow-color-rgba)),
+      0 0 1rem rgba(var(--shadow-color-rgba)),
+      0 0 2rem rgba(var(--shadow-color-rgba));
+  }
+}

@@ -1,10 +1,16 @@
 :root {
-  --color-rgb: 0, 0, 0;
+  --color-rgba: 255, 255, 255, 0.6;
+  --shadow-color-rgba: 0, 0, 0, 0;
+  --border-radius: 0.5rem;
+
+  --transition: 0.5s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-rgb: 255, 255, 255;
+:root {
+  .retro {
+    --color-rgba: 0, 150, 0, 0.5;
+    --shadow-color-rgba: 0, 150, 0, 0.5;
+    --border-radius: 0.1rem;
   }
 }
 
@@ -21,7 +27,17 @@ body {
 }
 
 body {
-  color: rgb(var(--color-rgb));
+  color: rgba(var(--color-rgba));
+  font-size: 24px;
+
+  transition: color var(--transition);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
 a {
@@ -29,8 +45,6 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+html {
+  color-scheme: dark;
 }
