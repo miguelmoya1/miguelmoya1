@@ -1,16 +1,21 @@
 :root {
-  --color-rgba: 255, 255, 255, 0.6;
-  --shadow-color-rgba: 0, 0, 0, 0;
-  --border-radius: 0.5rem;
+  --mmo-sys-transition: 0.5s ease-in-out;
+  --mmo-sys-spacing: 1rem;
 
-  --transition: 0.5s ease-in-out;
-}
+  /***************************************
+   * Variables for the theme and spacing *
+   ***************************************/
 
-:root {
+  --mmo-sys-color-primary: #a8c7faff;
+  --mmo-sys-color-shadow: #00000000;
+
+  --mmo-sys-spacing-border-radius: 0.5rem;
+
   .retro {
-    --color-rgba: 0, 150, 0, 0.5;
-    --shadow-color-rgba: 0, 150, 0, 0.5;
-    --border-radius: 0.1rem;
+    --mmo-sys-color-primary: #00960080;
+    --mmo-sys-color-shadow: #00960080;
+
+    --mmo-sys-spacing-border-radius: 0.1rem;
   }
 }
 
@@ -24,20 +29,14 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 body {
-  color: rgba(var(--color-rgba));
+  color: var(--mmo-sys-color-primary);
   font-size: 24px;
 
-  transition: color var(--transition);
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  transition: color var(--mmo-sys-transition);
 }
 
 a {

@@ -1,42 +1,37 @@
 .button {
   background-color: transparent;
   padding: 0.5rem 1rem;
-  border: 2px solid rgba(var(--color-rgba));
-  color: rgba(var(--color-rgba));
-  border-radius: 0.5rem;
-  box-shadow: 0 0 0.5rem rgba(var(--shadow-color-rgba)),
-    0 0 1rem rgba(var(--shadow-color-rgba)),
-    0 0 2rem rgba(var(--shadow-color-rgba));
+  border: 2px solid var(--mmo-sys-color-primary);
+  color: var(--mmo-sys-color-primary);
+  border-radius: var(--mmo-sys-spacing-border-radius);
+  box-shadow: 0 0 0.5rem var(--mmo-sys-color-shadow), 0 0 1rem var(--mmo-sys-color-shadow),
+    0 0 2rem var(--mmo-sys-color-shadow);
   animation: glow 1s ease-in-out infinite;
 
   cursor: pointer;
 
-  transition: var(--transition);
+  transition: var(--mmo-sys-transition);
 
   margin: 1rem;
 
   &.active {
     animation: none;
-    box-shadow: 0 0 0.2rem rgba(var(--shadow-color-rgba)),
-      0 0 0.5rem rgba(var(--shadow-color-rgba)),
-      0 0 1rem rgba(var(--shadow-color-rgba));
+    box-shadow: 0 0 0.2rem var(--mmo-sys-color-shadow), 0 0 0.5rem var(--mmo-sys-color-shadow),
+      0 0 1rem var(--mmo-sys-color-shadow);
   }
 }
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 0.5rem rgba(var(--shadow-color-rgba)),
-      0 0 1rem rgba(var(--shadow-color-rgba)),
-      0 0 2rem rgba(var(--shadow-color-rgba));
+    box-shadow: 0 0 0.5rem var(--mmo-sys-color-shadow), 0 0 1rem var(--mmo-sys-color-shadow),
+      0 0 2rem var(--mmo-sys-color-shadow);
   }
   50% {
-    box-shadow: 0 0 1.3rem rgba(var(--shadow-color-rgba)),
-      0 0 1.2rem rgba(var(--shadow-color-rgba)),
-      0 0 2rem rgba(var(--shadow-color-rgba));
+    box-shadow: 0 0 1.3rem var(--mmo-sys-color-shadow), 0 0 1.2rem var(--mmo-sys-color-shadow),
+      0 0 2rem var(--mmo-sys-color-shadow);
   }
   100% {
-    box-shadow: 0 0 0.5rem rgba(var(--shadow-color-rgba)),
-      0 0 1rem rgba(var(--shadow-color-rgba)),
-      0 0 2rem rgba(var(--shadow-color-rgba));
+    box-shadow: 0 0 0.5rem var(--mmo-sys-color-shadow), 0 0 1rem var(--mmo-sys-color-shadow),
+      0 0 2rem var(--mmo-sys-color-shadow);
   }
 }

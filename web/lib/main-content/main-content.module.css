@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--mmo-sys-spacing);
+
+  width: 100%;
+  min-height: 80%;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--mmo-sys-spacing);
+
+  width: 100%;
+}
+
+.images {
+  color: var(--mmo-sys-color-primary);
+  fill: var(--mmo-sys-color-primary);
+}
