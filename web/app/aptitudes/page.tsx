@@ -1,27 +1,32 @@
+import styles from './aptitudes.module.css';
+
 export default function Aptitudes() {
   return (
-    <div>
-      <h1>Aptitudes</h1>
-      <ul>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>React</li>
-        <li>Next.js</li>
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>GraphQL</li>
-        <li>PostgreSQL</li>
-        <li>MySQL</li>
-        <li>Git</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Python</li>
-        <li>Java</li>
-        <li>PHP</li>
-        <li>Linux</li>
-        <li>Windows</li>
-        <li>MacOS</li>
-      </ul>
+    <div className={styles.content}>
+      <h2>Aptitudes</h2>
+
+      <div className={styles.aptitudes}>
+        <div>
+          <h3>Frontend</h3>
+          <ul>
+            <li>Angular</li>
+            <li>capacitor</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Redux</li>
+            <li>TypeScript</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Backend</h3>
+          <ul>
+            <li>Nextjs</li>
+            <li>Nestjs</li>
+            <li>GraphQL</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { VT323 } from 'next/font/google';
-import MainContent from '../lib/main-content/main-content';
-import Nav from '../lib/nav/nav';
+import MainContent from '../components/main-content/main-content';
+import Nav from '../components/nav/nav';
 import './globals.css';
+import styles from './layout.module.css';
 
 const v = VT323({
   weight: '400',
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <MainContent />
 
-        <article>{children}</article>
+        <article className={styles.article}>{children}</article>
       </body>
     </html>
   );

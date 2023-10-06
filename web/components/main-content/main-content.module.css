@@ -7,7 +7,7 @@
   gap: var(--mmo-sys-spacing);
 
   width: 100%;
-  min-height: 80%;
+  min-height: 50%;
 }
 
 .socials {
@@ -24,4 +24,5 @@
 .images {
   color: var(--mmo-sys-color-primary);
   fill: var(--mmo-sys-color-primary);
+  transition: var(--mmo-sys-transition);
 }
