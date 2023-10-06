@@ -1,14 +1,23 @@
+'use client';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Button from '../../components/button/button';
 import ChangeRetro from '../../components/change-retro/change-retro';
 import styles from './nav.module.css';
 
 export default function Nav() {
+  const router = usePathname();
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <Button className='active'>Click me</Button>
-        <Button>Click me</Button>
-        <Button>Click me</Button>
+        <Link href={'/'}>
+          <Button className={router == '/' ? 'active' : ''}>About me</Button>
+        </Link>
+
+        <Link href={'/aptitudes'}>
+          <Button className={router == '/aptitudes' ? 'active' : ''}>Aptitudes</Button>
+        </Link>
       </nav>
 
       <ChangeRetro />
