@@ -6,16 +6,18 @@
    * Variables for the theme and spacing *
    ***************************************/
 
-  --mmo-sys-color-primary: #a8c7faff;
+  --mmo-sys-color-primary: #e6f0ffdd;
   --mmo-sys-color-shadow: #00000000;
 
   --mmo-sys-spacing-border-radius: 0.5rem;
+  --mmo-sys-border: 1px solid var(--mmo-sys-color-primary);
 
   .retro {
     --mmo-sys-color-primary: #00960080;
     --mmo-sys-color-shadow: #00960080;
 
     --mmo-sys-spacing-border-radius: 0.1rem;
+    --mmo-sys-border: 3px solid var(--mmo-sys-color-primary);
   }
 }
 

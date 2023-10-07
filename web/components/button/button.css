@@ -1,7 +1,7 @@
 .button {
   background-color: transparent;
   padding: 0.5rem 1rem;
-  border: 2px solid var(--mmo-sys-color-primary);
+  border: var(--mmo-sys-border);
   color: var(--mmo-sys-color-primary);
   border-radius: var(--mmo-sys-spacing-border-radius);
   box-shadow: 0 0 0.5rem var(--mmo-sys-color-shadow), 0 0 1rem var(--mmo-sys-color-shadow),
