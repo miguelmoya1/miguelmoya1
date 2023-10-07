@@ -1,17 +1,10 @@
-"use client";
+'use client';
 
-import Button from "../button/button";
+import { useRetroMode } from '../../lib/hooks/use-retro-mode';
+import Button from '../button/button';
 
 export default function ChangeRetro() {
-  const changeRetro = () => {
-    const isRetro = document.body.classList.contains("retro");
+  const [_, toggleRetro] = useRetroMode();
 
-    if (isRetro) {
-      document.body.classList.remove("retro");
-    } else {
-      document.body.classList.add("retro");
-    }
-  };
-
-  return <Button onClick={changeRetro}>Change retro</Button>;
+  return <Button onClick={toggleRetro}>Change retro</Button>;
 }

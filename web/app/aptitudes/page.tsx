@@ -12,7 +12,6 @@ export default function Aptitudes() {
             <li>Angular</li>
             <li>capacitor</li>
             <li>React</li>
-            <li>Next.js</li>
             <li>Redux</li>
             <li>TypeScript</li>
           </ul>
@@ -21,8 +20,8 @@ export default function Aptitudes() {
         <div>
           <h3>Backend</h3>
           <ul>
-            <li>Nextjs</li>
-            <li>Nestjs</li>
+            <li>Next.js</li>
+            <li>Nest.js</li>
             <li>GraphQL</li>
           </ul>
         </div>

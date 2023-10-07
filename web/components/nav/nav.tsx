@@ -1,12 +1,16 @@
 'use client';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useRetroMode } from '../../lib/hooks/use-retro-mode';
 import Button from '../button/button';
 import ChangeRetro from '../change-retro/change-retro';
 import styles from './nav.module.css';
 
 export default function Nav() {
   const router = usePathname();
+
+  const _ = useRetroMode();
 
   return (
     <header className={styles.header}>

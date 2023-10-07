@@ -4,11 +4,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  gap: var(--mmo-sys-spacing);
 }
 
 .aptitudes {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
 }
