@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { cookies } from 'next/headers';
 import MainContent from '../components/main-content/main-content';
 import Nav from '../components/nav/nav';
 import './globals.css';
@@ -10,9 +11,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const cookiesStore = cookies();
+
+  const isRetroMode = cookiesStore.has('retroMode');
+
   return (
     <html lang='en'>
-      <body>
+      <body className={isRetroMode ? 'retro' : ''}>
         <Nav />
         <MainContent />
 

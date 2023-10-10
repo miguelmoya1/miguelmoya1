@@ -1,10 +1,21 @@
 'use client';
 
-import { useRetroMode } from '../../lib/hooks/use-retro-mode';
 import Button from '../button/button';
 
 export default function ChangeRetro() {
-  const [_, toggleRetro] = useRetroMode();
+  async function toggleRetro() {
+    const response = await fetch('/api/theme', {
+      method: 'POST',
+    });
+
+    const body = await response.json();
+
+    if (body.isRetroMode) {
+      document.body.classList.add('retro');
+    } else {
+      document.body.classList.remove('retro');
+    }
+  }
 
   return <Button onClick={toggleRetro}>Change retro</Button>;
 }
