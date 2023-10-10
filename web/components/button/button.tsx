@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import "./button.css";
+import styles from './button.module.css';
 
 export default function Button({
   children,
@@ -12,7 +12,7 @@ export default function Button({
   onClick?: () => void;
 }) {
   return (
-    <button className={className + " button"} onClick={onClick}>
+    <button className={`${className} ${styles.button}`} onClick={onClick}>
       {children}
     </button>
   );

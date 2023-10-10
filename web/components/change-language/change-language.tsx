@@ -1,6 +1,7 @@
 'use client';
 
 import Button from '../button/button';
+import styles from './change-language.module.css';
 
 export default async function ChangeLanguage() {
   async function changeLanguage(lang: string) {
@@ -13,9 +14,9 @@ export default async function ChangeLanguage() {
   }
 
   return (
-    <>
+    <div className={styles.container}>
       <Button onClick={() => changeLanguage('es')}>es</Button>
       <Button onClick={() => changeLanguage('en')}>en</Button>
-    </>
+    </div>
   );
 }

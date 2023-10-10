@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: calc(var(--mmo-sys-spacing) / 2);
+}

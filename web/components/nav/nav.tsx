@@ -17,8 +17,10 @@ export default function Nav() {
         </Link>
       </nav>
 
-      <ChangeLanguage />
-      <ChangeRetro />
+      <nav className={styles.nav}>
+        <ChangeLanguage />
+        <ChangeRetro />
+      </nav>
     </header>
   );
 }

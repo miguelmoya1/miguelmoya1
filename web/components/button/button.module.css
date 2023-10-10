@@ -12,8 +12,6 @@
 
   transition: var(--mmo-sys-transition);
 
-  margin: 1rem;
-
   &.active {
     animation: none;
     box-shadow: 0 0 0.2rem var(--mmo-sys-color-shadow), 0 0 0.5rem var(--mmo-sys-color-shadow),

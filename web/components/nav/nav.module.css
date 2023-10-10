@@ -5,6 +5,8 @@
   justify-content: space-between;
 
   padding: 0 var(--mmo-sys-spacing);
+
+  margin: var(--mmo-sys-spacing) calc(var(--mmo-sys-spacing) / 2);
 }
 
 .nav {
