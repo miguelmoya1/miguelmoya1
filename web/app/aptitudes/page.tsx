@@ -1,9 +1,12 @@
+import { useTranslate } from '../../lib/hooks/use-translate';
 import styles from './aptitudes.module.css';
 
-export default function Aptitudes() {
+export default async function Aptitudes() {
+  const { t } = await useTranslate();
+
   return (
     <div className={styles.content}>
-      <h2>Aptitudes</h2>
+      <h2>{t('APTITUDES')}</h2>
 
       <div className={styles.aptitudes}>
         <div>

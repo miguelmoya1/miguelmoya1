@@ -1,3 +1,6 @@
 {
-  "ABOUT_ME": "Mi nombre es Miguel Moya Ortega. Soy un desarrollador Full Stack con sede en Alicante, España, y estoy muy apasionado y dedicado a mi trabajo. Con {{ years }} años de experiencia como desarrollador Full Stack profesional, he adquirido las habilidades necesarias para construir sitios web, aplicaciones y servicios excelentes y premium."
+  "ABOUT_ME": "Sobre mí",
+  "ABOUT_ME_CONTENT": "Mi nombre es Miguel Moya Ortega. Soy un desarrollador Full Stack con sede en Alicante, España, y estoy muy apasionado y dedicado a mi trabajo. Con {{ years }} años de experiencia como desarrollador Full Stack profesional, he adquirido las habilidades necesarias para construir sitios web, aplicaciones y servicios excelentes y premium.",
+  "APTITUDES": "Aptitudes",
+  "CHANGE_RETRO": "Cambiar a retro"
 }

@@ -1,25 +1,28 @@
 import Link from 'next/link';
+import { useTranslate } from '../../lib/hooks/use-translate';
 import Button from '../button/button';
 import ChangeLanguage from '../change-language/change-language';
 import ChangeRetro from '../change-retro/change-retro';
 import styles from './nav.module.css';
 
-export default function Nav() {
+export default async function Nav() {
+  const { t } = await useTranslate();
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href={'/'}>
-          <Button>About me</Button>
+          <Button>{t('ABOUT_ME')}</Button>
         </Link>
 
         <Link href={'/aptitudes'}>
-          <Button>Aptitudes</Button>
+          <Button>{t('APTITUDES')}</Button>
         </Link>
       </nav>
 
       <nav className={styles.nav}>
         <ChangeLanguage />
-        <ChangeRetro />
+        <ChangeRetro label={t('CHANGE_RETRO')} />
       </nav>
     </header>
   );

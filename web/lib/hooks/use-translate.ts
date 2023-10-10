@@ -1,6 +1,6 @@
 import { cookies, headers } from 'next/headers';
 
-export async function getTranslate() {
+export async function useTranslate() {
   const headersStatus = headers();
   const cookiesStatus = cookies();
 

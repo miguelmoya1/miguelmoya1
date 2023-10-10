@@ -10,7 +10,7 @@
 
   cursor: pointer;
 
-  transition: var(--mmo-sys-transition);
+  transition: var(--mmo-sys-transition), padding 0s, background-color 0s;
 
   &.active {
     animation: none;

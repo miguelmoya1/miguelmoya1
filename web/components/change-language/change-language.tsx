@@ -3,7 +3,7 @@
 import Button from '../button/button';
 import styles from './change-language.module.css';
 
-export default async function ChangeLanguage() {
+export default function ChangeLanguage() {
   async function changeLanguage(lang: string) {
     await fetch('/api/language', {
       method: 'POST',

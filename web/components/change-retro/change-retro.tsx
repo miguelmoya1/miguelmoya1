@@ -1,8 +1,11 @@
 'use client';
 
 import Button from '../button/button';
+interface Props {
+  label: string;
+}
 
-export default function ChangeRetro() {
+export default function ChangeRetro({ label }: Props) {
   async function toggleRetro() {
     const response = await fetch('/api/theme', {
       method: 'POST',
@@ -17,5 +20,5 @@ export default function ChangeRetro() {
     }
   }
 
-  return <Button onClick={toggleRetro}>Change retro</Button>;
+  return <Button onClick={toggleRetro}>{label}</Button>;
 }
