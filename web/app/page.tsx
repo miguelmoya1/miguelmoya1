@@ -1,22 +1,10 @@
-import { headers } from 'next/headers';
+import { getTranslate } from '../lib/props/get-translate';
 import styles from './page.module.css';
 
-async function getStaticProps(props?: any) {
-  const headersList = headers();
+export default async function AboutMe() {
+  const { t } = await getTranslate();
 
-  console.log('headersList', headersList);
+  const years = `${new Date().getFullYear() - new Date('01/01/2017').getFullYear()}`;
 
-  return {
-    props,
-  };
-}
-
-export default async function Home(args: any) {
-  const value = 'Hello World';
-
-  const props = await getStaticProps(args);
-
-  console.log('props', props);
-
-  return <p className={styles.text}>{value}</p>;
+  return <p className={styles.text}>{t('ABOUT_ME', { years })}</p>;
 }
