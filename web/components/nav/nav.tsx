@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Button from '../button/button';
+import ChangeLanguage from '../change-language/change-language';
 import ChangeRetro from '../change-retro/change-retro';
 import styles from './nav.module.css';
 
@@ -16,6 +17,7 @@ export default function Nav() {
         </Link>
       </nav>
 
+      <ChangeLanguage />
       <ChangeRetro />
     </header>
   );

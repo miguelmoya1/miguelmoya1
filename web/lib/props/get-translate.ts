@@ -1,20 +1,29 @@
-import { headers } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 
-export async function getTranslate(currentLang?: string) {
+export async function getTranslate() {
   const headersStatus = headers();
-  const lang = currentLang ?? headersStatus.get('Accept-Language');
-  const langToUse = lang?.split(',')[0].split('-')[0];
+  const cookiesStatus = cookies();
+
+  let langToUse = 'es';
+
+  if (cookiesStatus.has('lang')) {
+    langToUse = cookiesStatus.get('lang')!.value;
+  } else {
+    const lang = headersStatus.get('Accept-Language');
+    langToUse = lang?.split(',')[0].split('-')[0]!;
+  }
 
   let translate: { [key: string]: string } = {};
 
   try {
-    const translateLang = await import(`../../public/i18n/${langToUse}.json`);
+    const translateLang = await import(`../../locale/${langToUse}.json`);
 
     translate = translateLang.default;
   } catch (error) {
-    const esTranslate = await import(`../../public/i18n/es.json`);
+    const esTranslate = await import(`../../locale/es.json`);
 
     translate = esTranslate.default;
+    langToUse = 'es';
   }
 
   const getTranslate = (key: string, args?: { [key: string]: string }) => {
@@ -29,5 +38,5 @@ export async function getTranslate(currentLang?: string) {
     return value;
   };
 
-  return { langToUse, t: getTranslate };
+  return { t: getTranslate };
 }
