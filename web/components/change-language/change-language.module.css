@@ -3,5 +3,5 @@
   align-items: center;
   justify-content: center;
 
-  gap: calc(var(--mmo-sys-spacing) / 2);
+  gap: var(--mmo-sys-spacing-small);
 }

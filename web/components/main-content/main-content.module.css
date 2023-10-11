@@ -4,10 +4,14 @@
   align-items: center;
   justify-content: center;
 
-  gap: var(--mmo-sys-spacing);
+  gap: var(--mmo-sys-spacing-medium);
 
   width: 100%;
   min-height: 50%;
+}
+
+.title {
+  text-align: center;
 }
 
 .socials {
@@ -16,7 +20,7 @@
   align-items: center;
   justify-content: center;
 
-  gap: var(--mmo-sys-spacing);
+  gap: var(--mmo-sys-spacing-medium);
 
   width: 100%;
 }

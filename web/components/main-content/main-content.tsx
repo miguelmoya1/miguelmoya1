@@ -6,7 +6,7 @@ import styles from './main-content.module.css';
 export default function MainContent() {
   return (
     <main className={styles.container}>
-      <h1>Miguel Moya Ortega</h1>
+      <h1 className={styles.title}>Miguel Moya Ortega</h1>
 
       <div className={styles.socials}>
         <Link href='https://github.com/miguelmoya1'>

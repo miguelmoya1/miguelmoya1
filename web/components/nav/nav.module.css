@@ -1,17 +1,30 @@
 .header {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 var(--mmo-sys-spacing);
+  padding: 0 var(--mmo-sys-spacing-medium);
+  gap: var(--mmo-sys-spacing-medium);
 
-  margin: var(--mmo-sys-spacing) calc(var(--mmo-sys-spacing) / 2);
+  margin: var(--mmo-sys-spacing-medium) var(--mmo-sys-small);
 }
 
 .nav {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: var(--mmo-sys-spacing);
+  gap: var(--mmo-sys-spacing-medium);
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
+
+  .nav {
+    flex-direction: row;
+  }
 }

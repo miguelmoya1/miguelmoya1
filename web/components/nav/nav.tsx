@@ -18,6 +18,10 @@ export default async function Nav() {
         <Link href={'/aptitudes'}>
           <Button>{t('APTITUDES')}</Button>
         </Link>
+
+        <Link href={'/resume'}>
+          <Button>{t('RESUME')}</Button>
+        </Link>
       </nav>
 
       <nav className={styles.nav}>

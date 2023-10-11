@@ -1,6 +1,15 @@
 :root {
   --mmo-sys-transition: 0.5s ease-in-out;
-  --mmo-sys-spacing: 1rem;
+
+  --mmo-sys-spacing-tiny: 0.25rem;
+  --mmo-sys-spacing-small: 0.5rem;
+  --mmo-sys-spacing-medium: 1rem;
+  --mmo-sys-spacing-large: 2rem;
+
+  --mmo-sys-font-tiny: 0.5rem;
+  --mmo-sys-font-small: 0.7rem;
+  --mmo-sys-font-medium: 1rem;
+  --mmo-sys-font-large: 1.5rem;
 
   /***************************************
    * Variables for the theme and spacing *
@@ -36,7 +45,7 @@ body {
 
 body {
   color: var(--mmo-sys-color-primary);
-  font-size: 24px;
+  font-size: var(--mmo-sys-font-medium);
 
   transition: color var(--mmo-sys-transition);
 }
