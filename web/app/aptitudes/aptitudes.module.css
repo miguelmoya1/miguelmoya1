@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
 
-  gap: var(--mmo-sys-spacing);
+  gap: var(--mmo-sys-spacing-medium);
 }
 
 .aptitudes {
