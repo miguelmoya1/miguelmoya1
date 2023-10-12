@@ -7,8 +7,6 @@ export default async function Resume() {
   const { t } = await useTranslate();
   return (
     <div className={styles.container}>
-      <h1>{t('RESUME')}</h1>
-
       <h2>{t('EXPERIENCE')}</h2>
 
       <div className={styles.cards}>
