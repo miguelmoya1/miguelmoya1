@@ -1,0 +1,56 @@
+:root {
+  --mmo-sys-transition: 0.5s ease-in-out;
+
+  --mmo-sys-spacing-tiny: 0.25rem;
+  --mmo-sys-spacing-small: 0.5rem;
+  --mmo-sys-spacing-medium: 1rem;
+  --mmo-sys-spacing-large: 2rem;
+
+  --mmo-sys-font-tiny: 0.5rem;
+  --mmo-sys-font-small: 0.7rem;
+  --mmo-sys-font-medium: 1rem;
+  --mmo-sys-font-large: 1.5rem;
+
+  /***************************************
+   * Variables for the theme and spacing *
+   ***************************************/
+
+  --mmo-sys-color-primary: #e6f0ffdd;
+  --mmo-sys-color-shadow: #00000000;
+
+  --mmo-sys-spacing-border-radius: 0.5rem;
+  --mmo-sys-border: 1px solid var(--mmo-sys-color-primary);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+body {
+  color: var(--mmo-sys-color-primary);
+  font-size: var(--mmo-sys-font-medium);
+
+  transition: color var(--mmo-sys-transition);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  color-scheme: dark;
+}
+
+svg {
+  cursor: pointer;
+}

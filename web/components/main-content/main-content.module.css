@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--mmo-sys-spacing-medium);
+
+  width: 100%;
+  min-height: 50%;
+}
+
+.title {
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  gap: var(--mmo-sys-spacing-medium);
+
+  width: 100%;
+}
+
+.images {
+  color: var(--mmo-sys-color-primary);
+  fill: var(--mmo-sys-color-primary);
+  transition: var(--mmo-sys-transition);
+}
