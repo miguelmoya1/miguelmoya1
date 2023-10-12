@@ -1,6 +1,7 @@
 'use client';
 
-import Button from '../button/button';
+import En from '../svg/en';
+import Es from '../svg/es';
 import styles from './change-language.module.css';
 
 export default function ChangeLanguage() {
@@ -15,8 +16,9 @@ export default function ChangeLanguage() {
 
   return (
     <div className={styles.container}>
-      <Button onClick={() => changeLanguage('es')}>es</Button>
-      <Button onClick={() => changeLanguage('en')}>en</Button>
+      <Es width={24} height={24} onClick={() => changeLanguage('es')} />
+
+      <En width={24} height={24} onClick={() => changeLanguage('en')} />
     </div>
   );
 }
