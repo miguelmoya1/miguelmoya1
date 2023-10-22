@@ -9,11 +9,11 @@ export default function MainContent() {
       <h1 className={styles.title}>Miguel Moya Ortega</h1>
 
       <div className={styles.socials}>
-        <Link href='https://github.com/miguelmoya1'>
+        <Link href='https://github.com/miguelmoya1' aria-label='Link to Github'>
           <Github className={styles.images} />
         </Link>
 
-        <Link href='https://www.linkedin.com/in/miguelmo'>
+        <Link href='https://www.linkedin.com/in/miguelmo' aria-label='Link to Linkedin'>
           <Linkedin className={styles.images} />
         </Link>
       </div>
