@@ -1,8 +1,7 @@
 'use client';
 
-import En from '../../../app/components/svg/en';
-import Es from '../../../app/components/svg/es';
-import styles from './change-language.module.css';
+import En from './svg/en';
+import Es from './svg/es';
 
 export default function ChangeLanguage() {
   async function changeLanguage(lang: string) {
@@ -15,7 +14,7 @@ export default function ChangeLanguage() {
   }
 
   return (
-    <div className={styles.container}>
+    <div className='flex items-center gap-4'>
       <Es width={24} height={24} onClick={() => changeLanguage('es')} />
 
       <En width={24} height={24} onClick={() => changeLanguage('en')} />
