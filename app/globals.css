@@ -32,7 +32,6 @@ section {
   margin-top: 12rem;
 }
 
-/* only for mobiles */
 @media screen and (max-width: 640px) {
   section:last-child {
     margin-bottom: 6rem;
