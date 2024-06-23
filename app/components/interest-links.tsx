@@ -46,7 +46,7 @@ export default async function InterestLinks() {
   };
 
   return (
-    <section>
+    <section className='flex items-center justify-center'>
       <div className='flex flex-wrap items-center justify-center gap-4'>{links.map(prepareLinks)}</div>
     </section>
   );
