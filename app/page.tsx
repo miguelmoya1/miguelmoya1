@@ -1,5 +1,6 @@
 import AboutMe from './components/about-me';
 import Header from './components/header';
+import InterestLinks from './components/interest-links';
 import Timeline from './components/timeline';
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
 
       <AboutMe />
 
-      {/* <InterestLinks /> */}
+      <InterestLinks />
 
       <Timeline />
     </main>
