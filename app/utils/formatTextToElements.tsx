@@ -3,8 +3,8 @@ export const formatTextToElements = (text: string) => {
     text
       .split('. ')
       .filter(Boolean)
-      // Remove the last . from the last element
-      .map((p, i, arr) => (i === arr.length - 1 ? p : `${p}.`))
+      // Remove the last . in all the sentences
+      .map((p) => p.replace(/\.$/, ''))
       .map((p, i) => (
         <>
           <p key={i}>{p}.</p>
