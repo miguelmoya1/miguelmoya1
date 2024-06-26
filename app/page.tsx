@@ -1,4 +1,5 @@
 import AboutMe from './components/about-me';
+import Aptitudes from './components/aptitudes';
 import Header from './components/header';
 import InterestLinks from './components/interest-links';
 import Timeline from './components/timeline';
@@ -13,6 +14,8 @@ export default function Home() {
       <InterestLinks />
 
       <Timeline />
+
+      <Aptitudes />
     </main>
   );
 }
