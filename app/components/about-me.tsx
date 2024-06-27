@@ -7,7 +7,7 @@ export default async function AboutMe() {
 
   return (
     <section>
-      <div className='relative z-[-1] max-w-[600px] text-justify flex flex-col place-items-center'>
+      <div className='relative z-[-1] text-justify max-w-[1024px]'>
         {formatTextToElements(t('ABOUT_ME_DESCRIPTION', { experience }))}
       </div>
     </section>

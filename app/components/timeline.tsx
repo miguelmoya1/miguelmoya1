@@ -52,7 +52,7 @@ export default async function Timeline() {
       <h2 className='text-3xl font-bold text-gray mb-12 text-center text-wrap'>{t('TIMELINE')}</h2>
 
       <div className='relative z-[-1] flex place-items-center mb-24'>
-        <div className='flex flex-col items-center justify-center gap-16 w-full'>
+        <div className='flex flex-col items-center justify-center gap-16 max-w-[1024px]'>
           {jobs?.length > 0 && jobs.map(formatJob)}
         </div>
       </div>
