@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miguel Mo - Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .glass-effect {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .tag {
+            background-color: rgba(63, 63, 70, 0.5);
+            color: #a1a1aa;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .tag:hover {
+            background-color: rgba(82, 82, 91, 0.8);
+            color: #e4e4e7;
+        }
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .lang-btn {
+            background-color: rgba(39, 39, 42, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .lang-btn.active {
+            background-color: #2563eb;
+            color: #ffffff;
+        }
+        .lang-btn:not(.active):hover {
+            background-color: rgba(63, 63, 70, 1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Background Gradient -->
+    <div class="absolute top-0 left-0 -z-10 h-full w-full bg-black">
+        <div class="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(25,28,49,0.5)] opacity-50 blur-[80px]"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-effect">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">Miguelmo</a>
+            <div class="flex items-center space-x-4">
+                <a href="#about" class="text-slate-300 hover:text-white transition-colors duration-300" data-lang="nav_about">About</a>
+                <a href="#experience" class="text-slate-300 hover:text-white transition-colors duration-300" data-lang="nav_experience">Experience</a>
+                <div class="flex items-center rounded-full border border-slate-700 p-0.5 gap-2">
+                    <button id="lang-es" class="lang-btn px-3 py-1 text-sm rounded-full">ES</button>
+                    <button id="lang-en" class="lang-btn px-3 py-1 text-sm rounded-full active">EN</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex flex-col justify-center items-start">
+            <h1 class="text-5xl md:text-7xl font-black text-white leading-tight">
+                <span data-lang="hero_line1">Crafting Digital</span><br>
+                <span class="text-blue-500" data-lang="hero_line2">Experiences</span>
+            </h1>
+            <p class="mt-6 max-w-xl text-lg text-slate-300">
+                <span data-lang="hero_bio_1">Passionate Full Stack Developer with</span>
+                <span id="exp-years" class="font-bold text-white"></span>
+                <span data-lang="hero_bio_2">years of experience in building robust and efficient web applications.</span>
+            </p>
+            <div class="mt-8 flex items-center space-x-4">
+                <a href="https://www.linkedin.com/in/miguelmo/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-slate-800 hover:bg-blue-600 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="https://github.com/miguelmoya1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-slate-800 hover:bg-gray-600 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <!-- <a href="mailto:contact@miguelmo.dev" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300" data-lang="hero_contact">
+                    Get in Touch
+                </a> -->
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 md:py-32">
+            <div class="scroll-animation">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    <span data-lang="about_title_1">About</span> <span class="text-blue-500" data-lang="about_title_2">Me</span>
+                </h2>
+                <div class="max-w-3xl space-y-4 text-slate-300 text-lg leading-relaxed">
+                    <p data-lang="about_p1">I'm a passionate Full Stack Developer with a primary focus on Angular and NestJS, though I'm also proficient with React and Next.js. I consider myself a code craftsman, enjoying every line I write and always seeking the most elegant and efficient solution for each technical challenge.</p>
+                    <p data-lang="about_p2">My professional journey has led me to collaborate on projects in various industries, from agile and disruptive startups to established companies. This diversity has given me a broad and versatile view of software development, allowing me to adapt to different environments and work methodologies.</p>
+                    <p data-lang="about_p3">I'm a natural team player who enjoys collaborating with other professionals and sharing knowledge to achieve common goals. If you're looking for a committed, proactive Full Stack Developer with a solid technical foundation, don't hesitate to contact me!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 md:py-32">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center scroll-animation">
+                <span data-lang="experience_title_1">Professional</span> <span class="text-blue-500" data-lang="experience_title_2">Journey</span>
+            </h2>
+
+            <div class="relative max-w-3xl mx-auto">
+                <!-- Vertical Line -->
+                <div class="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-slate-700"></div>
+
+                <!-- Experience Items -->
+                <div class="space-y-16">
+                    <!-- GFT -->
+                    <div class="scroll-animation relative pl-10 md:pl-0">
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div class="md:text-right md:pr-8">
+                                <p class="font-bold text-lg text-white" data-lang="exp_gft_role">Frontend Team Lead & Developer</p>
+                                <p class="text-blue-400">GFT</p>
+                                <p class="text-sm text-slate-400" data-lang="exp_gft_date">January 2024 - Present</p>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:pl-8 md:border-l-0 border-l-2 border-transparent">
+                                <p class="text-slate-300" data-lang="exp_gft_desc">Currently developing an innovative insurance platform for Mapfre. My main responsibility is creating and maintaining reusable component libraries using Angular and Nx to ensure modularity and scalability.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="tag">TypeScript</span><span class="tag">Angular</span><span class="tag">Nx</span><span class="tag">Jest</span><span class="tag">Cypress</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-800 transform -translate-x-1/2 md:left-1/2"></div>
+                    </div>
+
+                    <!-- Nax Solutions -->
+                    <div class="scroll-animation relative pl-10 md:pl-0">
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div class="md:text-right md:pr-8">
+                                <p class="font-bold text-lg text-white" data-lang="exp_nax_role">Frontend Team Lead & Developer</p>
+                                <p class="text-blue-400">Nax Solutions</p>
+                                <p class="text-sm text-slate-400" data-lang="exp_nax_date">May 2023 - December 2023</p>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:pl-8 md:border-l-0 border-l-2 border-transparent">
+                                <p class="text-slate-300" data-lang="exp_nax_desc">Led a team of 4 in designing and developing a cutting-edge web application for large-scale agricultural management from scratch, integrating AI and Machine Learning algorithms.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="tag">TypeScript</span><span class="tag">Angular</span><span class="tag">Nx</span><span class="tag">Jest</span><span class="tag">Cypress</span><span class="tag">Capacitor</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-800 transform -translate-x-1/2 md:left-1/2"></div>
+                    </div>
+                    
+                    <!-- GESTORES 1880 -->
+                    <div class="scroll-animation relative pl-10 md:pl-0">
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div class="md:text-right md:pr-8">
+                                <p class="font-bold text-lg text-white" data-lang="exp_gestores_role">Frontend Team Lead & Developer</p>
+                                <p class="text-blue-400">GESTORES 1880</p>
+                                <p class="text-sm text-slate-400" data-lang="exp_gestores_date">December 2021 - April 2023</p>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:pl-8 md:border-l-0 border-l-2 border-transparent">
+                                <p class="text-slate-300" data-lang="exp_gestores_desc">Led the end-to-end development of the company's internal and external personnel management platform, directing a team of 6 frontend developers to optimize HR processes.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="tag">TypeScript</span><span class="tag">Angular</span><span class="tag">Nx</span><span class="tag">Jest</span><span class="tag">Cypress</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-800 transform -translate-x-1/2 md:left-1/2"></div>
+                    </div>
+
+                    <!-- Ourside -->
+                    <div class="scroll-animation relative pl-10 md:pl-0">
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div class="md:text-right md:pr-8">
+                                <p class="font-bold text-lg text-white" data-lang="exp_ourside_role">Full Stack Developer</p>
+                                <p class="text-blue-400">Ourside</p>
+                                <p class="text-sm text-slate-400" data-lang="exp_ourside_date">October 2018 - December 2021</p>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:pl-8 md:border-l-0 border-l-2 border-transparent">
+                                <p class="text-slate-300" data-lang="exp_ourside_desc">As a full-time freelance developer for an Irish company, I developed high-impact web applications with a small team, including a real-time football results platform and a pub ticket purchasing app.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">React Native</span><span class="tag">Next.JS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-800 transform -translate-x-1/2 md:left-1/2"></div>
+                    </div>
+
+                    <!-- Conwork SaaS Holding -->
+                    <div class="scroll-animation relative pl-10 md:pl-0">
+                        <div class="md:grid md:grid-cols-2 md:gap-8">
+                            <div class="md:text-right md:pr-8">
+                                <p class="font-bold text-lg text-white" data-lang="exp_conwork_role">Full Stack Developer</p>
+                                <p class="text-blue-400">Conwork SaaS Holding</p>
+                                <p class="text-sm text-slate-400" data-lang="exp_conwork_date">March 2017 - October 2018</p>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:pl-8 md:border-l-0 border-l-2 border-transparent">
+                                <p class="text-slate-300" data-lang="exp_conwork_desc">Began my professional career by modernizing an existing project, migrating a monolithic architecture to a separate backend and frontend structure, taking charge of the UI development.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span class="tag">TypeScript</span><span class="tag">Angular</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-4 top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-800 transform -translate-x-1/2 md:left-1/2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 border-t border-slate-800">
+        <p class="text-slate-400">&copy; <span id="footer-year"></span> Miguelmo. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Content for Language Switching ---
+            const translations = {
+                en: {
+                    nav_about: "About",
+                    nav_experience: "Experience",
+                    hero_line1: "Crafting Digital",
+                    hero_line2: "Experiences",
+                    hero_bio_1: "Passionate Full Stack Developer with",
+                    hero_bio_2: "years of experience in building robust and efficient web applications.",
+                    hero_contact: "Get in Touch",
+                    about_title_1: "About",
+                    about_title_2: "Me",
+                    about_p1: "I'm a passionate Full Stack Developer with a primary focus on Angular and NestJS, though I'm also proficient with React and Next.js. I consider myself a code craftsman, enjoying every line I write and always seeking the most elegant and efficient solution for each technical challenge.",
+                    about_p2: "My professional journey has led me to collaborate on projects in various industries, from agile and disruptive startups to established companies. This diversity has given me a broad and versatile view of software development, allowing me to adapt to different environments and work methodologies.",
+                    about_p3: "I'm a natural team player who enjoys collaborating with other professionals and sharing knowledge to achieve common goals. If you're looking for a committed, proactive Full Stack Developer with a solid technical foundation, don't hesitate to contact me!",
+                    experience_title_1: "Professional",
+                    experience_title_2: "Journey",
+                    exp_gft_role: "Frontend Team Lead & Developer",
+                    exp_gft_date: "January 2024 - Present",
+                    exp_gft_desc: "Currently developing an innovative insurance platform for Mapfre. My main responsibility is creating and maintaining reusable component libraries using Angular and Nx to ensure modularity and scalability.",
+                    exp_nax_role: "Frontend Team Lead & Developer",
+                    exp_nax_date: "May 2023 - December 2023",
+                    exp_nax_desc: "Led a team of 4 in designing and developing a cutting-edge web application for large-scale agricultural management from scratch, integrating AI and Machine Learning algorithms.",
+                    exp_gestores_role: "Frontend Team Lead & Developer",
+                    exp_gestores_date: "December 2021 - April 2023",
+                    exp_gestores_desc: "Led the end-to-end development of the company's internal and external personnel management platform, directing a team of 6 frontend developers to optimize HR processes.",
+                    exp_ourside_role: "Full Stack Developer",
+                    exp_ourside_date: "October 2018 - December 2021",
+                    exp_ourside_desc: "As a full-time freelance developer for an Irish company, I developed high-impact web applications with a small team, including a real-time football results platform and a pub ticket purchasing app.",
+                    exp_conwork_role: "Full Stack Developer",
+                    exp_conwork_date: "March 2017 - October 2018",
+                    exp_conwork_desc: "Began my professional career by modernizing an existing project, migrating a monolithic architecture to a separate backend and frontend structure, taking charge of the UI development."
+                },
+                es: {
+                    nav_about: "Sobre mí",
+                    nav_experience: "Experiencia",
+                    hero_line1: "Creando Experiencias",
+                    hero_line2: "Digitales",
+                    hero_bio_1: "Apasionado Desarrollador Full Stack con",
+                    hero_bio_2: "años de experiencia en la creación de aplicaciones web robustas y eficientes.",
+                    hero_contact: "Contacta",
+                    about_title_1: "Sobre",
+                    about_title_2: "Mí",
+                    about_p1: "Soy un apasionado desarrollador Full Stack con un enfoque principal en Angular y NestJS, aunque también me desenvuelvo con soltura en React y Next.js. Me considero un artesano del código, disfrutando cada línea que escribo y buscando siempre la solución más elegante y eficiente para cada desafío técnico.",
+                    about_p2: "Mi trayectoria profesional me ha llevado a colaborar en proyectos de diversas industrias, desde startups ágiles y disruptivas hasta empresas consolidadas. Esta diversidad me ha permitido adquirir una visión amplia y versátil del desarrollo de software, adaptándome a diferentes entornos y metodologías de trabajo.",
+                    about_p3: "Soy un jugador de equipo nato, disfruto colaborando con otros profesionales y compartiendo conocimientos para alcanzar objetivos comunes. Si estás buscando un desarrollador Full Stack comprometido, proactivo y con una sólida base técnica, ¡no dudes en contactarme!",
+                    experience_title_1: "Trayectoria",
+                    experience_title_2: "Profesional",
+                    exp_gft_role: "Líder Técnico y Desarrollador Frontend",
+                    exp_gft_date: "Enero 2024 - Actualidad",
+                    exp_gft_desc: "Actualmente desarrollo una innovadora plataforma de seguros para Mapfre. Mi responsabilidad principal es la creación y mantenimiento de librerías de componentes reutilizables con Angular y Nx para garantizar la modularidad y escalabilidad.",
+                    exp_nax_role: "Líder Técnico y Desarrollador Frontend",
+                    exp_nax_date: "Mayo 2023 - Diciembre 2023",
+                    exp_nax_desc: "Lideré un equipo de 4 personas en el diseño y desarrollo desde cero de una aplicación web de vanguardia para la gestión agrícola a gran escala, integrando algoritmos de IA y Machine Learning.",
+                    exp_gestores_role: "Líder Técnico y Desarrollador Frontend",
+                    exp_gestores_date: "Diciembre 2021 - Abril 2023",
+                    exp_gestores_desc: "Dirigí el desarrollo integral de la plataforma de gestión de personal de la empresa, coordinando un equipo de 6 desarrolladores frontend para optimizar los procesos de RRHH.",
+                    exp_ourside_role: "Desarrollador Full Stack",
+                    exp_ourside_date: "Octubre 2018 - Diciembre 2021",
+                    exp_ourside_desc: "Como desarrollador freelance a tiempo completo para una empresa irlandesa, desarrollé aplicaciones de alto impacto con un equipo reducido, incluyendo una plataforma de resultados de fútbol en tiempo real y una app de compra de entradas para pubs.",
+                    exp_conwork_role: "Desarrollador Full Stack",
+                    exp_conwork_date: "Marzo 2017 - Octubre 2018",
+                    exp_conwork_desc: "Inicié mi carrera profesional modernizando un proyecto existente, migrando una arquitectura monolítica a una estructura de backend y frontend separados, asumiendo la responsabilidad del desarrollo de la UI."
+                }
+            };
+            
+            const langEnBtn = document.getElementById('lang-en');
+            const langEsBtn = document.getElementById('lang-es');
+
+            function setLanguage(lang) {
+                const content = translations[lang];
+                document.querySelectorAll('[data-lang]').forEach(el => {
+                    const key = el.getAttribute('data-lang');
+                    if (content[key]) {
+                        el.textContent = content[key];
+                    }
+                });
+                document.documentElement.lang = lang;
+                
+                if (lang === 'es') {
+                    langEsBtn.classList.add('active');
+                    langEnBtn.classList.remove('active');
+                } else {
+                    langEnBtn.classList.add('active');
+                    langEsBtn.classList.remove('active');
+                }
+            }
+
+            langEnBtn.addEventListener('click', () => setLanguage('en'));
+            langEsBtn.addEventListener('click', () => setLanguage('es'));
+
+            // --- Calculate Experience Years ---
+            const startYear = 2017;
+            const currentYear = new Date().getFullYear();
+            const experienceYears = currentYear - startYear;
+            document.getElementById('exp-years').textContent = experienceYears + " ";
+
+            // --- Set Footer Year ---
+            document.getElementById('footer-year').textContent = currentYear;
+
+            // --- Scroll Animations ---
+            const animatedElements = document.querySelectorAll('.scroll-animation');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // --- Set initial language ---
+            setLanguage('en'); // Default to English
+        });
+    </script>
+</body>
+</html>
