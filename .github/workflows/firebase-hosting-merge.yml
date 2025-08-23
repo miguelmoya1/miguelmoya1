@@ -10,9 +10,14 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      # - uses: actions/checkout@v4
-      # - run: npm ci && npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: List files in the workspace
+        run: ls -la
+
+      - name: Deploy to Firebase Hosting
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MIGUELMO_2162C }}
