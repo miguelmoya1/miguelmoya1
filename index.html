@@ -152,6 +152,13 @@
             About
           </a>
           <a
+            href="#projects"
+            class="text-slate-300 hover:text-white transition-colors duration-300"
+            data-lang="nav_projects"
+          >
+            Projects
+          </a>
+          <a
             href="#experience"
             class="text-slate-300 hover:text-white transition-colors duration-300"
             data-lang="nav_experience"
@@ -253,7 +260,7 @@
       </section>
 
       <!-- About Me Section -->
-      <section id="about" class="py-20 md:py-32" data-section-name="about">
+      <section id="about" class="py-24 md:py-40" data-section-name="about">
         <div class="scroll-animation">
           <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
             <span data-lang="about_title_1">About</span>
@@ -286,10 +293,80 @@
         </div>
       </section>
 
+      <!-- Projects Section -->
+      <section
+        id="projects"
+        class="py-24 md:py-40"
+        data-section-name="projects"
+      >
+        <h2
+          class="text-3xl md:text-4xl font-bold text-white mb-12 text-center scroll-animation"
+        >
+          <span data-lang="projects_title_1">My</span>
+          <span class="text-blue-500" data-lang="projects_title_2"
+            >Projects</span
+          >
+        </h2>
+        <div class="max-w-3xl mx-auto grid grid-cols-1 gap-8">
+          <!-- Project Card: Pawdar -->
+          <div
+            class="scroll-animation glass-effect rounded-xl group transition-all duration-300 hover:border-slate-500"
+          >
+            <div class="p-8">
+              <div class="flex justify-between items-start gap-4">
+                <h3
+                  class="text-2xl font-bold text-white"
+                  data-lang="proj_pawdar_title"
+                >
+                  Pawdar
+                </h3>
+                <div class="flex items-center flex-shrink-0 space-x-4">
+                  <a
+                    href="https://pawdar.live"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-slate-400 hover:text-white transition-colors"
+                    aria-label="Live site for Pawdar"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                      ></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <p class="mt-4 text-slate-300" data-lang="proj_pawdar_desc">
+                An innovative platform to connect pet owners and facilitate the
+                search for lost pets through a community-based alert system.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span class="tag">Angular</span>
+                <span class="tag">Firebase</span>
+                <span class="tag">Angular SSR</span>
+                <span class="tag">Google Maps API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Experience Section -->
       <section
         id="experience"
-        class="py-20 md:py-32"
+        class="py-24 md:py-40"
         data-section-name="experience"
       >
         <h2
@@ -538,6 +615,7 @@
         const translations = {
           en: {
             nav_about: "About",
+            nav_projects: "Projects",
             nav_experience: "Experience",
             hero_line1: "Crafting Digital",
             hero_line2: "Experiences",
@@ -552,6 +630,11 @@
               "My professional journey has led me to collaborate on projects in various industries, from agile and disruptive startups to established companies. This diversity has given me a broad and versatile view of software development, allowing me to adapt to different environments and work methodologies.",
             about_p3:
               "I'm a natural team player who enjoys collaborating with other professionals and sharing knowledge to achieve common goals. If you're looking for a committed, proactive Full Stack Developer with a solid technical foundation, don't hesitate to contact me!",
+            projects_title_1: "My",
+            projects_title_2: "Projects",
+            proj_pawdar_title: "Pawdar",
+            proj_pawdar_desc:
+              "An innovative platform to connect pet owners and facilitate the search for lost pets through a community-based alert system.",
             experience_title_1: "Professional",
             experience_title_2: "Journey",
             exp_gft_role: "Frontend Team Lead & Developer",
@@ -577,6 +660,7 @@
           },
           es: {
             nav_about: "Sobre mí",
+            nav_projects: "Proyectos",
             nav_experience: "Experiencia",
             hero_line1: "Creando Experiencias",
             hero_line2: "Digitales",
@@ -591,6 +675,11 @@
               "Mi trayectoria profesional me ha llevado a colaborar en proyectos de diversas industrias, desde startups ágiles y disruptivas hasta empresas consolidadas. Esta diversidad me ha permitido adquirir una visión amplia y versátil del desarrollo de software, adaptándome a diferentes entornos y metodologías de trabajo.",
             about_p3:
               "Soy un jugador de equipo nato, disfruto colaborando con otros profesionales y compartiendo conocimientos para alcanzar objetivos comunes. Si estás buscando un desarrollador Full Stack comprometido, proactivo y con una sólida base técnica, ¡no dudes en contactarme!",
+            projects_title_1: "Mis",
+            projects_title_2: "Proyectos",
+            proj_pawdar_title: "Pawdar",
+            proj_pawdar_desc:
+              "Una plataforma innovadora para conectar a dueños de mascotas y facilitar la búsqueda de animales perdidos a través de un sistema de alertas comunitario.",
             experience_title_1: "Trayectoria",
             experience_title_2: "Profesional",
             exp_gft_role: "Líder Técnico y Desarrollador Frontend",
