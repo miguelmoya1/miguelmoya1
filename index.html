@@ -100,10 +100,13 @@
       .lang-btn:not(.active):hover {
         background-color: rgba(63, 63, 70, 1);
       }
+      :root {
+        --navbar-height: 64px;
+      }
       .mobile-menu {
         display: none;
         position: fixed;
-        top: 64px;
+        top: var(--navbar-height);
         left: 0;
         right: 0;
         background: rgba(23, 23, 23, 0.98);
@@ -138,7 +141,15 @@
       .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
       }
-      @media (max-width: 768px) {
+      .mobile-nav-container {
+        display: flex;
+      }
+      @media (min-width: 768px) {
+        .mobile-nav-container {
+          display: none;
+        }
+      }
+      @media (max-width: 767px) {
         .hamburger {
           display: flex;
         }
@@ -232,7 +243,7 @@
         </div>
 
         <!-- Mobile Navigation -->
-        <div class="flex items-center space-x-4 md:hidden">
+        <div class="mobile-nav-container items-center space-x-4">
           <div
             class="flex items-center rounded-full border border-slate-700 p-0.5 space-x-1"
           >
@@ -708,7 +719,7 @@
         });
 
         // Close mobile menu when clicking outside
-        document.addEventListener("click", (e) => {
+        const handleOutsideClick = (e) => {
           if (
             !hamburger.contains(e.target) &&
             !mobileMenu.contains(e.target) &&
@@ -717,7 +728,8 @@
             hamburger.classList.remove("active");
             mobileMenu.classList.remove("active");
           }
-        });
+        };
+        document.addEventListener("click", handleOutsideClick);
 
         // --- Content for Language Switching ---
         const translations = {
