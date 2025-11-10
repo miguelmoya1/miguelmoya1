@@ -100,6 +100,42 @@
       .lang-btn:not(.active):hover {
         background-color: rgba(63, 63, 70, 1);
       }
+      /* Mobile Menu Animations */
+      #mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+          opacity 0.3s ease;
+      }
+      #mobile-menu.show {
+        max-height: 500px;
+        opacity: 1;
+      }
+      .mobile-menu-link {
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+      }
+      .mobile-menu-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background: linear-gradient(90deg, #3b82f6, #60a5fa);
+        transition: width 0.3s ease;
+      }
+      .mobile-menu-link:hover::after {
+        width: 100%;
+      }
+      #mobile-menu-btn {
+        transition: transform 0.3s ease;
+      }
+      #mobile-menu-btn:active {
+        transform: scale(0.95);
+      }
     </style>
 
     <!-- JSON-LD Structured Data -->
@@ -143,7 +179,46 @@
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
         <a href="#" class="text-xl font-bold text-white">Miguelmo</a>
-        <div class="flex items-center space-x-4">
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <svg
+            id="hamburger-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            id="close-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 hidden"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-4">
           <a
             href="#about"
             class="text-slate-300 hover:text-white transition-colors duration-300"
@@ -183,6 +258,54 @@
           </div>
         </div>
       </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden glass-effect border-t border-slate-700 hidden"
+      >
+        <div class="container mx-auto px-6 py-6 flex flex-col space-y-5">
+          <a
+            href="#about"
+            class="mobile-menu-link text-slate-300 hover:text-white transition-colors duration-300 text-lg"
+            data-lang="nav_about"
+          >
+            About
+          </a>
+          <a
+            href="#projects"
+            class="mobile-menu-link text-slate-300 hover:text-white transition-colors duration-300 text-lg"
+            data-lang="nav_projects"
+          >
+            Projects
+          </a>
+          <a
+            href="#experience"
+            class="mobile-menu-link text-slate-300 hover:text-white transition-colors duration-300 text-lg"
+            data-lang="nav_experience"
+          >
+            Experience
+          </a>
+          <div class="flex items-center justify-start pt-2">
+            <div
+              class="flex items-center rounded-full border border-slate-700 p-0.5 space-x-1 shadow-lg"
+            >
+              <button
+                id="lang-es-mobile"
+                class="lang-btn px-4 py-2 text-sm rounded-full"
+              >
+                ES
+              </button>
+              <button
+                id="lang-en-mobile"
+                class="lang-btn px-4 py-2 text-sm rounded-full active"
+              >
+                EN
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main class="container mx-auto px-6">
@@ -582,9 +705,7 @@
     </main>
 
     <footer class="text-center py-8 border-t border-slate-800">
-      <p class="text-slate-400">
-        &copy; <span id="footer-year"></span> Miguelmo. All Rights Reserved.
-      </p>
+      <p class="text-slate-400">Miguelmo - <span id="footer-year"></span></p>
     </footer>
 
     <script type="module">
@@ -707,6 +828,8 @@
 
         const langEnBtn = document.getElementById("lang-en");
         const langEsBtn = document.getElementById("lang-es");
+        const langEnBtnMobile = document.getElementById("lang-en-mobile");
+        const langEsBtnMobile = document.getElementById("lang-es-mobile");
 
         function setLanguage(lang) {
           // Log the language change event
@@ -724,14 +847,63 @@
           if (lang === "es") {
             langEsBtn.classList.add("active");
             langEnBtn.classList.remove("active");
+            langEsBtnMobile.classList.add("active");
+            langEnBtnMobile.classList.remove("active");
           } else {
             langEnBtn.classList.add("active");
             langEsBtn.classList.remove("active");
+            langEnBtnMobile.classList.add("active");
+            langEsBtnMobile.classList.remove("active");
           }
         }
 
         langEnBtn.addEventListener("click", () => setLanguage("en"));
         langEsBtn.addEventListener("click", () => setLanguage("es"));
+        langEnBtnMobile.addEventListener("click", () => setLanguage("en"));
+        langEsBtnMobile.addEventListener("click", () => setLanguage("es"));
+
+        // --- Mobile Menu Toggle ---
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const hamburgerIcon = document.getElementById("hamburger-icon");
+        const closeIcon = document.getElementById("close-icon");
+        const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+        mobileMenuBtn.addEventListener("click", () => {
+          const isHidden = mobileMenu.classList.contains("hidden");
+
+          if (isHidden) {
+            // Open menu
+            mobileMenu.classList.remove("hidden");
+            // Trigger animation after display is set
+            setTimeout(() => {
+              mobileMenu.classList.add("show");
+            }, 10);
+            hamburgerIcon.classList.add("hidden");
+            closeIcon.classList.remove("hidden");
+          } else {
+            // Close menu
+            mobileMenu.classList.remove("show");
+            // Wait for animation to complete
+            setTimeout(() => {
+              mobileMenu.classList.add("hidden");
+            }, 400);
+            hamburgerIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          }
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.remove("show");
+            setTimeout(() => {
+              mobileMenu.classList.add("hidden");
+            }, 400);
+            hamburgerIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          });
+        });
 
         // --- Calculate Experience Years ---
         const startYear = 2017;
