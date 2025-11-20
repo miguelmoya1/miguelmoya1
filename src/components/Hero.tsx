@@ -56,7 +56,7 @@ const Hero = () => {
                         <MagneticButton href="https://www.linkedin.com/in/miguelmo/">
                             <Linkedin className="w-6 h-6 text-white" />
                         </MagneticButton>
-                        <MagneticButton href="https://github.com/miguelmo">
+                        <MagneticButton href="https://github.com/miguelmoya1">
                             <Github className="w-6 h-6 text-white" />
                         </MagneticButton>
                     </motion.div>
