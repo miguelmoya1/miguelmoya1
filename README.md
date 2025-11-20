@@ -43,8 +43,5 @@ Welcome to my GitHub profile! I'm a passionate developer focused on building mod
 ---
 
 <div align="center">
-  <p>Thanks for visiting! Feel free to reach out or check my website.</p>
-  <a href="https://miguelmo.dev">
-    <img src="https://img.shields.io/badge/Visit%20My%20Website-miguelmo.dev-success?style=for-the-badge" />
-  </a>
+  <p>Thanks for visiting! Feel free to reach out.</p>
 </div>
