@@ -12,9 +12,6 @@
         "destination": "/index.html"
       }
     ],
-    "predeploy": [
-      "npm run build"
-    ],
     "headers": [
       {
         "source": "/favicon.ico",
