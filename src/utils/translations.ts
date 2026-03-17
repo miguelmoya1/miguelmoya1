@@ -17,14 +17,16 @@ export const translations = {
             p1: "I'm a passionate Full Stack Developer with a primary focus on Angular and NestJS, though I'm also proficient with React and Next.js. I consider myself a code craftsman, enjoying every line I write and always seeking the most elegant and efficient solution for each technical challenge.",
             p2: "My professional journey has led me to collaborate on projects in various industries, from agile and disruptive startups to established companies. This diversity has given me a broad and versatile view of software development, allowing me to adapt to different environments and work methodologies.",
             p3: "I'm a natural team player who enjoys collaborating with other professionals and sharing knowledge to achieve common goals. If you're looking for a committed, proactive Full Stack Developer with a solid technical foundation, don't hesitate to contact me!",
+            p4: "I actively leverage Artificial Intelligence (AI) in my daily workflow to write cleaner code faster, optimize performance, and architect smart features. I heavily utilize AI tools like Copilot and advanced LLMs for pair programming, debugging, and ideating robust solutions in all my projects.",
         },
         projects: {
             title1: "My",
             title2: "Projects",
             pawdar: {
                 title: "Pawdar",
-                desc: "An innovative platform to connect pet owners and facilitate the search for lost pets through a community-based alert system.",
+                desc: "An innovative AI-powered platform to connect pet owners and facilitate the search for lost pets. It leverages Artificial Intelligence to analyze pet features and accurately locate similar lost pets, as well as AI for procedural generation of pets in the app.",
             },
+            aiBadge: "AI Powered",
         },
         experience: {
             title1: "Professional",
@@ -32,12 +34,12 @@ export const translations = {
             gft: {
                 role: "Frontend Team Lead & Developer",
                 date: "January 2024 - Present",
-                desc: "Currently developing an innovative insurance platform for Mapfre. My main responsibility is creating and maintaining reusable component libraries using Angular and Nx to ensure modularity and scalability.",
+                desc: "Currently developing an innovative insurance platform for Mapfre. My main responsibility is creating and maintaining reusable component libraries using Angular and Nx. I lead the frontend architecture, heavily utilizing AI tools to accelerate development, improve code quality, and brainstorm robust technical approaches.",
             },
             nax: {
                 role: "Frontend Team Lead & Developer",
                 date: "May 2023 - December 2023",
-                desc: "Led a team of 4 in designing and developing a cutting-edge web application for large-scale agricultural management from scratch, integrating AI and Machine Learning algorithms.",
+                desc: "Led a team of 4 in designing and developing a cutting-edge web application for large-scale agricultural management from scratch. Actively integrated AI and Machine Learning algorithms to analyze crop data and automated several development workflows using AI-assisted programming.",
             },
             gestores: {
                 role: "Frontend Team Lead & Developer",
@@ -74,14 +76,16 @@ export const translations = {
             p1: "Soy un apasionado desarrollador Full Stack con un enfoque principal en Angular y NestJS, aunque también me desenvuelvo con soltura en React y Next.js. Me considero un artesano del código, disfrutando cada línea que escribo y buscando siempre la solución más elegante y eficiente para cada desafío técnico.",
             p2: "Mi trayectoria profesional me ha llevado a colaborar en proyectos de diversas industrias, desde startups ágiles y disruptivas hasta empresas consolidadas. Esta diversidad me ha permitido adquirir una visión amplia y versátil del desarrollo de software, adaptándome a diferentes entornos y metodologías de trabajo.",
             p3: "Soy un jugador de equipo nato, disfruto colaborando con otros profesionales y compartiendo conocimientos para alcanzar objetivos comunes. Si estás buscando un desarrollador Full Stack comprometido, proactivo y con una sólida base técnica, ¡no dudes en contactarme!",
+            p4: "Aprovecho activamente la Inteligencia Artificial (IA) en mi día a día para programar de forma más limpia y rápida, optimizar el rendimiento y diseñar funcionalidades inteligentes. Utilizo herramientas de IA y LLMs avanzados de forma constante para pair programming, depuración e idear soluciones para mis proyectos.",
         },
         projects: {
             title1: "Mis",
             title2: "Proyectos",
             pawdar: {
                 title: "Pawdar",
-                desc: "Una plataforma innovadora para conectar a dueños de mascotas y facilitar la búsqueda de animales perdidos a través de un sistema de alertas comunitario.",
+                desc: "Una plataforma innovadora, potenciada por IA, para conectar a dueños de mascotas y facilitar la búsqueda de animales perdidos. Utiliza Inteligencia Artificial para localizar con precisión a mascotas de rasgos similares y para la generación procedural de las mismas dentro de la aplicación.",
             },
+            aiBadge: "Potenciado por IA",
         },
         experience: {
             title1: "Trayectoria",
@@ -89,12 +93,12 @@ export const translations = {
             gft: {
                 role: "Líder Técnico y Desarrollador Frontend",
                 date: "Enero 2024 - Actualidad",
-                desc: "Actualmente desarrollo una innovadora plataforma de seguros para Mapfre. Mi responsabilidad principal es la creación y mantenimiento de librerías de componentes reutilizables con Angular y Nx para garantizar la modularidad y escalabilidad.",
+                desc: "Actualmente desarrollo una innovadora plataforma de seguros para Mapfre. Creo y mantengo librerías de componentes reutilizables con Angular y Nx. Lidero la arquitectura frontend apoyándome fuertemente en herramientas de IA para acelerar el desarrollo, asegurar la calidad y el diseño técnico.",
             },
             nax: {
                 role: "Líder Técnico y Desarrollador Frontend",
                 date: "Mayo 2023 - Diciembre 2023",
-                desc: "Lideré un equipo de 4 personas en el diseño y desarrollo desde cero de una aplicación web de vanguardia para la gestión agrícola a gran escala, integrando algoritmos de IA y Machine Learning.",
+                desc: "Lideré un equipo de 4 personas en el diseño y desarrollo desde cero de una aplicación web para la gestión agrícola a gran escala. Integramos activamente algoritmos de IA y Machine Learning, automatizando y acelerando el propio desarrollo del sistema utilizando programación asistida por IA.",
             },
             gestores: {
                 role: "Líder Técnico y Desarrollador Frontend",

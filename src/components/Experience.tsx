@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
+import { Sparkles } from "lucide-react";
 import { useLanguage } from "../utils/LanguageContext";
 
 const Experience = () => {
@@ -14,10 +15,12 @@ const Experience = () => {
     {
       key: "gft",
       tags: ["TypeScript", "Angular", "Nx", "Jest", "Cypress"],
+      hasAI: true,
     },
     {
       key: "nax",
       tags: ["TypeScript", "Angular", "Nx", "Jest", "Cypress", "Capacitor"],
+      hasAI: true,
     },
     {
       key: "gestores",
@@ -104,6 +107,12 @@ const Experience = () => {
                             {tag}
                           </span>
                         ))}
+                        {job.hasAI && (
+                          <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
+                            <Sparkles className="w-3.5 h-3.5" />
+                            {t.projects.aiBadge}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>

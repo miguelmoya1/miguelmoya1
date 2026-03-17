@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Sparkles } from "lucide-react";
 import { useLanguage } from "../utils/LanguageContext";
 
 const Projects = () => {
@@ -53,6 +53,10 @@ const Projects = () => {
                     </span>
                   ),
                 )}
+                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 text-sm font-medium rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
+                  <Sparkles className="w-4 h-4" />
+                  {t.projects.aiBadge}
+                </span>
               </div>
             </div>
           </TiltCard>

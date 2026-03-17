@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Globe, Users } from "lucide-react";
+import { Code2, Globe, Users, Bot } from "lucide-react";
 import { useLanguage } from "../utils/LanguageContext";
 
 const About = () => {
@@ -22,6 +22,12 @@ const About = () => {
       icon: <Users className="w-8 h-8 text-pink-400" />,
       text: t.about.p3,
       delay: 0.6,
+      className: "md:col-span-3",
+    },
+    {
+      icon: <Bot className="w-8 h-8 text-emerald-400" />,
+      text: t.about.p4,
+      delay: 0.8,
       className: "md:col-span-3",
     },
   ];
