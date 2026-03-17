@@ -1,6 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #8b5cf6;
+  --color-dark: #0a0a0a;
+  --color-dark-lighter: #171717;
+  --font-family-sans: 'Inter', sans-serif;
+}
 
 @layer base {
   html {
@@ -29,8 +35,9 @@
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500;
+  @apply bg-clip-text text-transparent bg-linear-to-r from-blue-400 via-purple-500 to-pink-500;
 }
+
 
 .bg-noise {
   position: fixed;

@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <LanguageProvider>
-      <div className="bg-dark min-h-screen text-slate-200 selection:bg-blue-500/30 relative">
         <Navbar />
         <main>
           <Hero />
@@ -18,7 +17,6 @@ function App() {
           <Experience />
         </main>
         <Footer />
-      </div>
     </LanguageProvider>
   );
 }
