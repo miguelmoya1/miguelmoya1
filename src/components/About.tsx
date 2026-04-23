@@ -43,7 +43,7 @@ const About = () => {
         >
           <h2 className="text-4xl md:text-6xl font-black mb-16 text-center">
             {t.about.title1}{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-600">
               {t.about.title2}
             </span>
           </h2>
