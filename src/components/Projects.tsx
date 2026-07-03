@@ -11,14 +11,14 @@ const Projects = () => {
     "Angular", "Angular SSR", "TypeScript",
     "NestJS", "Prisma",
     "Google Cloud Run", "Neon PostgreSQL", "Firebase Auth", "DNS",
-    "Google Maps API", "GitHub Actions", "CI/CD",
+    "Google Maps API", "GitHub Actions", "CI/CD", "Docker",
   ];
 
   const coasterTags = [
     "Angular", "TypeScript", "Nx",
     "NestJS", "Prisma",
-    "Google Cloud", "Neon PostgreSQL", "Firebase Auth",
-    "GitHub Actions", "CI/CD",
+    "Google Cloud", "Neon PostgreSQL",
+    "LLM Tooling", "AI Integration", "CI/CD", "Docker",
   ];
 
   return (
@@ -80,28 +80,18 @@ const Projects = () => {
           {/* Coaster */}
           <TiltCard>
             <div className="p-10 h-full flex flex-col bg-linear-to-br from-white/5 to-white/0 backdrop-blur-xl border border-white/10 rounded-2xl group-hover:border-purple-500/30 transition-colors relative overflow-hidden">
-              {/* In Development Badge */}
-              <div className="absolute top-5 right-5">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-full bg-orange-500/15 border border-orange-500/25 text-orange-400">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-                  </span>
-                  {'inDevBadge' in t.projects ? (t.projects as { inDevBadge: string }).inDevBadge : 'In Development'}
-                </span>
-              </div>
-
               <div className="flex justify-between items-start mb-8">
                 <h3 className="text-3xl font-bold text-white group-hover:text-purple-400 transition-colors">
                   {'coaster' in t.projects ? (t.projects.coaster as { title: string }).title : 'Coaster'}
                 </h3>
-                <button
-                  disabled
-                  className="p-3 rounded-full bg-white/5 opacity-40 cursor-not-allowed"
-                  title={'comingSoon' in t.projects ? (t.projects as { comingSoon: string }).comingSoon : 'Coming Soon'}
+                <a
+                  href="https://coaster.business"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-white/5 hover:bg-purple-600 transition-all hover:scale-110"
                 >
-                  <Construction size={24} />
-                </button>
+                  <ExternalLink size={24} />
+                </a>
               </div>
 
               <p className="text-slate-300 mb-8 grow leading-relaxed text-lg">
@@ -119,6 +109,10 @@ const Projects = () => {
                 {coasterTags.map((tag) => (
                   <TechTag key={tag} tag={tag} />
                 ))}
+                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 text-sm font-medium rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.1)]">
+                  <Sparkles className="w-4 h-4" />
+                  {t.projects.aiBadge}
+                </span>
               </div>
             </div>
           </TiltCard>

@@ -17,7 +17,7 @@ export const translations = {
       p1: "I'm a passionate Full Stack Developer with a primary focus on Angular and NestJS, though I'm also proficient with React and Next.js. I consider myself a code craftsman, enjoying every line I write and always seeking the most elegant and efficient solution for each technical challenge.",
       p2: "My professional journey has led me to collaborate on projects in various industries, from agile and disruptive startups to established companies. This diversity has given me a broad and versatile view of software development, allowing me to adapt to different environments and work methodologies.",
       p3: "I'm a natural team player who enjoys collaborating with other professionals and sharing knowledge to achieve common goals. If you're looking for a committed, proactive Full Stack Developer with a solid technical foundation, don't hesitate to contact me!",
-      p4: "I actively leverage Artificial Intelligence (AI) in my daily workflow to write cleaner code faster, optimize performance, and architect smart features. I heavily utilize AI tools like Copilot and advanced LLMs for pair programming, debugging, and ideating robust solutions in all my projects.",
+      p4: "I am highly proficient in working with LLM tooling and integrating Artificial Intelligence into real-world applications. Beyond using advanced AI tools for pair programming and architecting solutions, I have successfully implemented and deployed AI-powered projects that leverage LLMs to deliver smart, data-driven features.",
     },
     projects: {
       title1: "My",
@@ -30,9 +30,9 @@ export const translations = {
       },
       coaster: {
         title: "Coaster",
-        desc: "A full-stack application currently under active development. Built with a modern monorepo architecture using Nx, with Angular on the frontend and NestJS powering the backend API. The infrastructure runs entirely on Google Cloud with automated CI/CD pipelines via GitHub Actions.",
+        desc: "A comprehensive bar and restaurant management platform powered by AI. It features manual charts, inventory and stock control, user and shift management, and seamless order taking for employees (both at the bar and tableside). The system utilizes LLM tooling to provide intelligent insights, helping businesses optimize their operations and make data-driven decisions.",
         stack:
-          "Angular · NestJS · Nx · Prisma · Google Cloud · Neon PostgreSQL · Firebase Auth · GitHub Actions · CI/CD",
+          "Angular · NestJS · Nx · Prisma · Google Cloud · Neon PostgreSQL · LLMs Tooling · AI Integration",
       },
       aiBadge: "AI Powered",
       inDevBadge: "In Development",
@@ -114,7 +114,7 @@ export const translations = {
       p1: "Soy un apasionado desarrollador Full Stack con un enfoque principal en Angular y NestJS, aunque también me desenvuelvo con soltura en React y Next.js. Me considero un artesano del código, disfrutando cada línea que escribo y buscando siempre la solución más elegante y eficiente para cada desafío técnico.",
       p2: "Mi trayectoria profesional me ha llevado a colaborar en proyectos de diversas industrias, desde startups ágiles y disruptivas hasta empresas consolidadas. Esta diversidad me ha permitido adquirir una visión amplia y versátil del desarrollo de software, adaptándome a diferentes entornos y metodologías de trabajo.",
       p3: "Soy un jugador de equipo nato, disfruto colaborando con otros profesionales y compartiendo conocimientos para alcanzar objetivos comunes. Si estás buscando un desarrollador Full Stack comprometido, proactivo y con una sólida base técnica, ¡no dudes en contactarme!",
-      p4: "Aprovecho activamente la Inteligencia Artificial (IA) en mi día a día para programar de forma más limpia y rápida, optimizar el rendimiento y diseñar funcionalidades inteligentes. Utilizo herramientas de IA y LLMs avanzados de forma constante para pair programming, depuración e idear soluciones para mis proyectos.",
+      p4: "Tengo gran experiencia en el uso de herramientas de LLMs (LLM tooling) y en la integración de Inteligencia Artificial en aplicaciones del mundo real. Más allá de utilizar IA avanzada para pair programming y diseño de arquitectura, he implementado y desplegado con éxito proyectos potenciados por IA que aprovechan los LLMs para ofrecer funcionalidades inteligentes.",
     },
     projects: {
       title1: "Mis",
@@ -127,9 +127,9 @@ export const translations = {
       },
       coaster: {
         title: "Coaster",
-        desc: "Una aplicación full-stack actualmente en desarrollo activo. Construida con una arquitectura monorepo moderna usando Nx, con Angular en el frontend y NestJS en el backend. La infraestructura corre completamente en Google Cloud con pipelines de CI/CD automatizados mediante GitHub Actions.",
+        desc: "Plataforma integral de gestión de bares y restaurantes potenciada por IA. Cuenta con gráficos manuales, control de stock e inventario, gestión de usuarios y turnos, y un sistema eficiente de toma de pedidos para empleados (en barra y en mesa). El sistema integra herramientas basadas en LLMs (LLM tooling) para ofrecer insights inteligentes, ayudando a los negocios a optimizar sus operaciones de manera eficiente.",
         stack:
-          "Angular · NestJS · Nx · Prisma · Google Cloud · Neon PostgreSQL · Firebase Auth · GitHub Actions · CI/CD",
+          "Angular · NestJS · Nx · Prisma · Google Cloud · Neon PostgreSQL · LLMs Tooling · AI Integration",
       },
       aiBadge: "Potenciado por IA",
       inDevBadge: "En Desarrollo",

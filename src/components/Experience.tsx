@@ -34,12 +34,12 @@ const Experience = () => {
     },
     {
       key: "nax",
-      tags: ["TypeScript", "Angular", "NestJS", "Nx", "Jest", "Cypress", "Capacitor", "Google Cloud", "Firebase", "GCP", "GitHub Actions", "CI/CD"],
+      tags: ["TypeScript", "Angular", "NestJS", "Nx", "Jest", "Cypress", "Capacitor", "Google Cloud", "Firebase", "GCP", "GitHub Actions", "CI/CD", "Docker"],
       hasAI: true,
     },
     {
       key: "gestores",
-      tags: ["TypeScript", "Angular", "Nx", "Jest", "Cypress", "Jenkins", "GitHub Actions", "CI/CD"],
+      tags: ["TypeScript", "Angular", "Nx", "Jest", "Cypress", "Jenkins", "GitHub Actions", "CI/CD", "Docker"],
     },
     {
       key: "ourside",
