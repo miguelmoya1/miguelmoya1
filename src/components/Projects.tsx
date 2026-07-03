@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ExternalLink, Construction, Sparkles } from "lucide-react";
+import { ExternalLink, Sparkles } from "lucide-react";
 import { useLanguage } from "../utils/LanguageContext";
 import TechTag from "./TechTag";
 
