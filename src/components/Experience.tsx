@@ -29,24 +29,29 @@ const Experience = () => {
   const jobs = [
     {
       key: "gft",
+      companyName: "GFT",
       tags: ["TypeScript", "Angular", "NestJS", "Nx", "Jest", "Cypress", "Google Cloud", "Firebase", "GitHub Actions", "CI/CD"],
       hasAI: true,
     },
     {
       key: "nax",
+      companyName: "NAX",
       tags: ["TypeScript", "Angular", "NestJS", "Nx", "Jest", "Cypress", "Capacitor", "Google Cloud", "Firebase", "GCP", "GitHub Actions", "CI/CD", "Docker"],
       hasAI: true,
     },
     {
       key: "gestores",
+      companyName: "Gestores 1880",
       tags: ["TypeScript", "Angular", "Nx", "Jest", "Cypress", "Jenkins", "GitHub Actions", "CI/CD", "Docker"],
     },
     {
       key: "ourside",
+      companyName: "Ourside",
       tags: ["TypeScript", "React", "React Native", "Next.JS", "AWS", "S3", "EC2", "Lambda"],
     },
     {
       key: "conwork",
+      companyName: "Conwork",
       tags: ["TypeScript", "Angular", "AWS", "S3", "EC2"],
     },
   ];
@@ -99,10 +104,10 @@ const Experience = () => {
                   >
                     <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-colors duration-300">
                       <h3 className="text-2xl font-bold text-white mb-2">
-                        {jobData.role}
+                        {job.companyName}
                       </h3>
                       <p className="text-blue-400 font-bold mb-2 uppercase tracking-widest text-sm">
-                        {job.key.toUpperCase()}
+                        {jobData.role}
                       </p>
                       <p className="text-slate-500 text-sm mb-6 font-mono">
                         {jobData.date}
